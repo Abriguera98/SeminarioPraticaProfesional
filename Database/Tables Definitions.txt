@@ -1,0 +1,14 @@
+Tabla 1 Usuarios
+ID	Usuario	Contrasena
+
+Tabla 2 Voluntarios
+DNI	Nombre	Apellido
+
+Tabla 3 Historias
+ID	Voluntario.DNI
+
+Tabla 4 Historias-Entradas
+HistoriaID	EntradaID
+
+Tabla 5 Entradas
+EntradaID Fecha	Descripcion	UsuarioID

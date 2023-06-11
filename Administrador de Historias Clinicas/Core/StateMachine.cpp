@@ -5,9 +5,10 @@
 StateMachine* StateMachine::mInstance = nullptr;
 
 StateMachine::StateMachine(HINSTANCE& hInstance, int nCmdShow)
-	:mState(State::eInitializing), mCmdShow(nCmdShow)
+	:mState(State::eInitializing), mCmdShow(nCmdShow), mHWnd(nullptr), mWaiting(false)
 {
 	mGUIManager = GUIManager::getInstance(hInstance);
+	mDataProcessor = DataProcessor::getInstance();
 }
 
 void StateMachine::setWaiting(bool waiting)
@@ -42,13 +43,10 @@ void StateMachine::run()
 
 void StateMachine::doStep()
 {
-	HWND* hWnd = nullptr;
 	switch (mState)
 	{
 		case eInitializing:
-			hWnd = mGUIManager->setIdle();
-			ShowWindow(*hWnd, mCmdShow);
-			UpdateWindow(*hWnd);
+			Step_Initializing();
 			break;
 		case eShowWelcomeScreen:
 			break;
@@ -82,6 +80,13 @@ void StateMachine::getNextStep()
 	case eExit:
 		break;
 	}
+}
+
+void StateMachine::Step_Initializing()
+{
+	mHWnd = mGUIManager->setIdle();
+	ShowWindow(*mHWnd, mCmdShow);
+	UpdateWindow(*mHWnd);
 }
 
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)

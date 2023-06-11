@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Data Abstractions">
+      <UniqueIdentifier>{daea5856-646c-48b4-a7ba-dcf7c2aa01e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data Abstractions">
+      <UniqueIdentifier>{3df6c66e-165c-43ff-b333-0280186c154d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{11b67e63-4e43-4b51-b851-b55e5b5f096c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{e30b0ab1-90b0-4d0a-829e-7c7775808440}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -24,25 +36,34 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Administrador de Historias Clinicas.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Core\DatabaseWrapper.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="GUIManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Core\DataProcessor.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="StateMachine.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Core\GUIManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\StateMachine.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GUIManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Core\DatabaseWrapper.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="StateMachine.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Core\DataProcessor.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GUIManager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\StateMachine.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,4 @@
-#include "GUIManager.h"
-#include "StateMachine.h"
+#include "Core/StateMachine.h"
 
 // Stored instance handle for use in Win32 API calls such as FindResource
 HINSTANCE hInst;

@@ -5,10 +5,7 @@
 #include <tchar.h>
 
 #include "GUIManager.h"
-
-enum States {
-
-};
+#include "DataProcessor.h"
 
 class StateMachine {
 	enum State {
@@ -30,7 +27,9 @@ public:
 private:
 	static StateMachine* mInstance;
 	GUIManager* mGUIManager;
+	DataProcessor* mDataProcessor;
 	StateMachine(HINSTANCE& hInstance, int nCmdShow);
+	HWND* mHWnd;
 
 	State mState;
 	const int mCmdShow;
@@ -38,6 +37,8 @@ private:
 
 	void doStep();
 	void getNextStep();
+
+	void Step_Initializing();
 };
 
 LRESULT CALLBACK OnMessage(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);

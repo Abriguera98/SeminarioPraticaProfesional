@@ -4,6 +4,7 @@ Sistema de Gestion de Historias Psicologicas para Voluntarios de la Fundacion So
 
 # Architecture
 This is a windows based application. This consists on a State Machine that communicates with a GUIManaged and lets it know how to update the windows.
-All the data processing is handled through a DataProcessor class that will communicate with the DatabaseWrapper (TBI).
-The DatabaseWrapper class is an abstraction of the Database that allows to run stored procedures and run SQL querys.
+All the data processing is handled through a DataProcessor class that will communicate with the DatabaseWrapper.
+
+The DatabaseWrapper class is an interface with the database to be able to run stored procedures and get data.
 
