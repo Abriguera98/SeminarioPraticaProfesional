@@ -1,16 +1,20 @@
-#include "Core/StateMachine.h"
+#include "UI/LandingForm.h"
 
-// Stored instance handle for use in Win32 API calls such as FindResource
-HINSTANCE hInst;
+using namespace System;
 
-int WINAPI WinMain(
-    _In_ HINSTANCE hInstance,
-    _In_opt_ HINSTANCE hPrevInstance,
-    _In_ LPSTR     lpCmdLine,
-    _In_ int       nCmdShow
-)
+using namespace System::Windows::Forms;
+
+[STAThread]
+
+void main(array<String^>^ args)
 {
-    StateMachine* mStateMachine = StateMachine::getInstance(hInstance, nCmdShow);
-    mStateMachine->run();
-    return 0;
+
+    Application::EnableVisualStyles();
+
+    Application::SetCompatibleTextRenderingDefault(false);
+
+    UIForms::LandingForm form;
+
+    Application::Run(% form);
+
 }

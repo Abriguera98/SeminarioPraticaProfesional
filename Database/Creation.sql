@@ -3,7 +3,7 @@ USE Soles_DB
 CREATE TABLE Usuarios(
     UsuarioID int,
     Usuario varchar(255),
-    Clave varchar(255)
+    Clave BIGINT
 )
 
 CREATE TABLE Voluntarios(

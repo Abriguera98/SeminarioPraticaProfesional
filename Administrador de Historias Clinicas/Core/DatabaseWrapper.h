@@ -9,10 +9,9 @@ public:
 	void operator=(const DatabaseWrapper&) = delete;
 
 	void Connect();
+	unsigned int GetUserData(char* aUser);
 private:
 	static DatabaseWrapper* mInstance;
 	DatabaseWrapper();
 	SAConnection mConnection;
-
-	void GetUser();
 };

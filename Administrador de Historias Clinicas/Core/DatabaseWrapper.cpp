@@ -29,7 +29,12 @@ DatabaseWrapper::DatabaseWrapper()
 {
 }
 
-void DatabaseWrapper::GetUser()
+unsigned int DatabaseWrapper::GetUserData(char* aUser)
 {
-
+    std::string retValue("");
+    SACommand cmd(&mConnection, _TSA("EXEC dbo.uspGetUserData :1"));
+    cmd.Param(1).setAsString() = aUser;
+    cmd.Execute();
+    cmd.FetchNext();
+    return cmd.Field(1).asUInt64();
 }

@@ -11,11 +11,9 @@ class StateMachine {
 	enum State {
 		eInitializing,
 		eShowWelcomeScreen,
-		eWaiting,
 		eExit
 	};
 public:
-	static StateMachine* getInstance(HINSTANCE& hInstance, int nCmdShow);
 	static StateMachine* getInstance();
 
 	StateMachine(StateMachine& other) = delete;
@@ -28,11 +26,9 @@ private:
 	static StateMachine* mInstance;
 	GUIManager* mGUIManager;
 	DataProcessor* mDataProcessor;
-	StateMachine(HINSTANCE& hInstance, int nCmdShow);
-	HWND* mHWnd;
+	StateMachine();
 
 	State mState;
-	const int mCmdShow;
 	bool mWaiting;
 
 	void doStep();
@@ -40,5 +36,3 @@ private:
 
 	void Step_Initializing();
 };
-
-LRESULT CALLBACK OnMessage(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);

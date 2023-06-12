@@ -13,29 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Data Abstractions">
-      <UniqueIdentifier>{daea5856-646c-48b4-a7ba-dcf7c2aa01e4}</UniqueIdentifier>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{fa3102f9-540f-461b-ac64-3742830566ed}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Data Abstractions">
-      <UniqueIdentifier>{3df6c66e-165c-43ff-b333-0280186c154d}</UniqueIdentifier>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{1b7b0ccd-fc0f-4e09-92e3-f613aa2d39aa}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Core">
-      <UniqueIdentifier>{11b67e63-4e43-4b51-b851-b55e5b5f096c}</UniqueIdentifier>
+      <UniqueIdentifier>{51197f9f-f487-4275-a5b2-bd02077f26a0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Core">
-      <UniqueIdentifier>{e30b0ab1-90b0-4d0a-829e-7c7775808440}</UniqueIdentifier>
+      <UniqueIdentifier>{5193cf0a-6c96-42dd-a1ea-ced8df22b760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data Abstractions">
+      <UniqueIdentifier>{d1e647fc-91a7-4552-9930-d2921c2b93b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data Abstractions">
+      <UniqueIdentifier>{254d25a0-789d-472c-aad8-079fc3e7a620}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Core\DatabaseWrapper.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
@@ -48,11 +45,11 @@
     <ClInclude Include="Core\StateMachine.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+    <ClInclude Include="UI\LandingForm.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Core\DatabaseWrapper.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
@@ -65,18 +62,11 @@
     <ClCompile Include="Core\StateMachine.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Administrador de Historias Clinicas.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Administrador de Historias Clinicas.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\LandingForm.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

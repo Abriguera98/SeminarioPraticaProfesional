@@ -6,13 +6,10 @@
 
 class GUIManager {
 public:
-	static GUIManager* getInstance(HINSTANCE& hInstance);
+	static GUIManager* getInstance();
 	GUIManager(GUIManager& other) = delete;
 	void operator=(const GUIManager &) = delete;
-
-	HWND* setIdle();
 private:
 	static GUIManager* mInstance;
-	HINSTANCE * mHInstance;
-	GUIManager(HINSTANCE& hInstance);
+	GUIManager();
 };
