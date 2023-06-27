@@ -4,15 +4,13 @@
 
 StateMachine* StateMachine::mInstance = nullptr;
 
-StateMachine::StateMachine()
-{
-	mGUIManager = GUIManager::getInstance();
-	mDataProcessor = DataProcessor::getInstance();
-}
+std::map<std::string, std::string>* StateMachine::mDataMap = new std::map<std::string, std::string>();
 
-void StateMachine::setWaiting(bool waiting)
+StateMachine::StateMachine()
+	: mState(eInitializing)
 {
-	mWaiting = waiting;
+	mDataProcessor = DataProcessor::getInstance();
+	mGUIManager = GUIManager::getInstance(mDataProcessor);
 }
 
 StateMachine* StateMachine::getInstance()
@@ -22,6 +20,18 @@ StateMachine* StateMachine::getInstance()
 		mInstance = new StateMachine();
 	}
 	return mInstance;
+}
+
+bool StateMachine::addData(std::string key, std::string value)
+{
+	(*mDataMap)[key] =  value;
+	return true;
+}
+
+bool StateMachine::getData(std::string key, std::string& ret)
+{
+	ret = (*mDataMap)[key];
+	return true;
 }
 
 void StateMachine::run()
@@ -35,12 +45,19 @@ void StateMachine::run()
 
 void StateMachine::doStep()
 {
+	mGUIManager->resetResult();
 	switch (mState)
 	{
 		case eInitializing:
+			/*
 			Step_Initializing();
 			break;
-		case eShowWelcomeScreen:
+		case eLogin:
+			Step_Login();
+			break;
+		case eMainScreen:
+		*/
+			Step_MainScreen();
 			break;
 		case eExit:
 			break;
@@ -49,18 +66,61 @@ void StateMachine::doStep()
 
 void StateMachine::getNextStep()
 {
+	GUIManager::Result guiResult = mGUIManager->getResult();
+	DataProcessor::Result dataResult = mDataProcessor->getResult();
+
 	switch (mState)
 	{
 	case eInitializing:
+		switch (guiResult) {
+		case GUIManager::Result::eClosed:
+			mState = eExit;
+			break;
+		case GUIManager::Result::eProceedToLoginWindow:
+			mState = eLogin;
+			break;
+		}
 		break;
-	case eShowWelcomeScreen:
+
+	case eLogin:
+		switch (guiResult) {
+		case GUIManager::Result::eClosed:
+			mState = eExit;
+			break;
+		case GUIManager::Result::eLoginVerified:
+			mState = eMainScreen;
+			break;
+		}
 		break;
+
+	case eMainScreen:
+		break;
+
 	case eExit:
 		break;
 	}
+
+	mGUIManager->resetResult();
+	mDataProcessor->resetResult();
 }
 
 void StateMachine::Step_Initializing()
 {
-	mWaiting = true;
+	mGUIManager->ShowLandingScreen();
+}
+
+void StateMachine::Step_Login()
+{
+	mGUIManager->ShowLoginScreen();
+}
+
+void StateMachine::Step_LoginFailed()
+{
+	mGUIManager->ShowLoginFailed();
+}
+
+void StateMachine::Step_MainScreen()
+{
+	mDataProcessor->fillPerfiles();
+	mGUIManager->ShowMainScreen();
 }

@@ -1,15 +1,46 @@
 #pragma once
-#include <windows.h>
+
+#include <Windows.h>
 #include <stdlib.h>
 #include <string.h>
 #include <tchar.h>
 
+#include "DataProcessor.h"
+
 class GUIManager {
 public:
-	static GUIManager* getInstance();
+	enum Result {
+		eNotSet = 0,
+		eClosed,
+		eProceedToLoginWindow,
+		eLoginVerified
+	};
+
+	//Singleton Definition
+	static GUIManager* getInstance(DataProcessor* dataProcessor);
 	GUIManager(GUIManager& other) = delete;
 	void operator=(const GUIManager &) = delete;
+
+	//Result Handling
+	void resetResult() { mResult = eNotSet; };
+	void setResult(Result value) { mResult = value; };
+	Result getResult() { return mResult; };
+
+	//Windows to show
+	void ShowLandingScreen();
+	void ShowLoginScreen();
+	void ShowLoginFailed();
+	void ShowMainScreen();
+
+	bool attemptLogin();
+	void fillMainData(System::Windows::Forms::ListView^ list);
+	void fillViewData(System::Windows::Forms::ListView^ list, unsigned int profile);
+	System::String^ getEntryDescriptionFromProfileDate(unsigned int profileID, System::String^ date);
+	void changeProfileState(unsigned int index);
 private:
 	static GUIManager* mInstance;
-	GUIManager();
+	DataProcessor* mDataProcessor;
+
+	Result mResult;
+	GUIManager(DataProcessor* dataProcessor);
 };

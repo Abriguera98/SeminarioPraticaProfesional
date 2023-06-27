@@ -1,4 +1,4 @@
-#include "UI/LandingForm.h"
+#include "Core/StateMachine.h"
 
 using namespace System;
 
@@ -8,13 +8,12 @@ using namespace System::Windows::Forms;
 
 void main(array<String^>^ args)
 {
-
     Application::EnableVisualStyles();
 
     Application::SetCompatibleTextRenderingDefault(false);
 
-    UIForms::LandingForm form;
+    StateMachine* mStateMachine = StateMachine::getInstance();
 
-    Application::Run(% form);
+    mStateMachine->run();
 
 }

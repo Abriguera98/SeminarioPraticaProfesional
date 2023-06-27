@@ -1,30 +1,31 @@
 USE Soles_DB
 
-CREATE TABLE Usuarios(
-    UsuarioID int,
-    Usuario varchar(255),
-    Clave BIGINT
-)
+CREATE TABLE Usuarios (
+  UsuarioID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  Usuario VARCHAR(50) NOT NULL UNIQUE,
+  Alias VARCHAR(100) NOT NULL,
+  Clave VARCHAR(20) NOT NULL
+);
 
-CREATE TABLE Voluntarios(
-    DNI varchar(255),
-    Usuario varchar(255),
-    Contrasena varchar(255)
-)
+CREATE TABLE Voluntarios (
+  DNI VARCHAR(8) PRIMARY KEY NOT NULL,
+  Nombre VARCHAR(20) NOT NULL,
+  Apellido VARCHAR(20) NOT NULL
+);
 
-CREATE TABLE Historias(
-    ID int,
-    VoluntarioDNI varchar(255)
-)
+CREATE TABLE PerfilesPsicologicos (
+  PerfilID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  VoluntarioDNI VARCHAR(8) UNIQUE NOT NULL,
+  Activa BOOLEAN NOT NULL,
+  FOREIGN KEY (VoluntarioDNI) REFERENCES Voluntarios(DNI)
+);
 
-CREATE TABLE HistoriasEntradas(
-	HistoriaID int,
-	EntradaID int
-)
-
-CREATE TABLE Entradas(
-	EntradaID int,
-    Fecha date,
-    Descripcion varchar(1000),
-    UsuarioID int
-)
+CREATE TABLE Entradas (
+  EntradaID INTEGER PRIMARY KEY AUTOINCREMENT,
+  Fecha VARCHAR(10) NOT NULL,
+  Descripcion TEXT NOT NULL,
+  UsuarioID INTEGER NOT NULL,
+  PerfilID INTEGER NOT NULL,
+  FOREIGN KEY (UsuarioID) REFERENCES Usuarios(UsuarioID),
+  FOREIGN KEY (PerfilID) REFERENCES PerfilesPsicologicos(PerfilID)
+);

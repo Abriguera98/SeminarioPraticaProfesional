@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Data Abstractions">
       <UniqueIdentifier>{254d25a0-789d-472c-aad8-079fc3e7a620}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Images">
+      <UniqueIdentifier>{75ea3a35-b7e8-4c8f-9cf1-99fc27993c8b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\DatabaseWrapper.h">
@@ -46,6 +49,36 @@
       <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="UI\LandingForm.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\LoginForm.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Constants.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\LoginFailedMessage.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\MainForm.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Abstractions\PerfilPsicologico.h">
+      <Filter>Header Files\Data Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Abstractions\Usuario.h">
+      <Filter>Header Files\Data Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Abstractions\Entrada.h">
+      <Filter>Header Files\Data Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Abstractions\Voluntario.h">
+      <Filter>Header Files\Data Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\VisualizationForm.h">
       <Filter>Header Files\UI</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,5 +101,34 @@
     <ClCompile Include="UI\LandingForm.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
+    <ClCompile Include="UI\LoginForm.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\LoginFailedMessage.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MainForm.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Abstractions\Entrada.cpp">
+      <Filter>Source Files\Data Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Abstractions\PerfilPsicologico.cpp">
+      <Filter>Source Files\Data Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Abstractions\Usuario.cpp">
+      <Filter>Source Files\Data Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Abstractions\Voluntario.cpp">
+      <Filter>Source Files\Data Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\VisualizationForm.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Administrador de Historias Clinicas.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

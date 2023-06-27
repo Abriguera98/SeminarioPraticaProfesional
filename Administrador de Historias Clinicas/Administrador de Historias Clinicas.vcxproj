@@ -135,15 +135,41 @@
     <ClCompile Include="Core\DataProcessor.cpp" />
     <ClCompile Include="Core\GUIManager.cpp" />
     <ClCompile Include="Core\StateMachine.cpp" />
+    <ClCompile Include="Data Abstractions\Entrada.cpp" />
+    <ClCompile Include="Data Abstractions\PerfilPsicologico.cpp" />
+    <ClCompile Include="Data Abstractions\Usuario.cpp" />
+    <ClCompile Include="Data Abstractions\Voluntario.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="UI\LandingForm.cpp" />
+    <ClCompile Include="UI\LoginFailedMessage.cpp" />
+    <ClCompile Include="UI\LoginForm.cpp" />
+    <ClCompile Include="UI\MainForm.cpp" />
+    <ClCompile Include="UI\VisualizationForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\Constants.h" />
     <ClInclude Include="Core\DatabaseWrapper.h" />
     <ClInclude Include="Core\DataProcessor.h" />
     <ClInclude Include="Core\GUIManager.h" />
     <ClInclude Include="Core\StateMachine.h" />
+    <ClInclude Include="Data Abstractions\Entrada.h" />
+    <ClInclude Include="Data Abstractions\PerfilPsicologico.h" />
+    <ClInclude Include="Data Abstractions\Usuario.h" />
+    <ClInclude Include="Data Abstractions\Voluntario.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="UI\LandingForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="UI\LoginFailedMessage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="UI\LoginForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="UI\MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="UI\VisualizationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -151,6 +177,21 @@
     <EmbeddedResource Include="UI\LandingForm.resx">
       <DependentUpon>UI\LandingForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginFailedMessage.resx">
+      <DependentUpon>UI\LoginFailedMessage.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>UI\LoginForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>UI\MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\VisualizationForm.resx">
+      <DependentUpon>UI\VisualizationForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Administrador de Historias Clinicas.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
