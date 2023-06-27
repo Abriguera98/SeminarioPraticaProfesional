@@ -7,6 +7,7 @@ public:
 	static Usuario* getUsuario(const std::string& aAlias, unsigned int aID);
 	Usuario(Usuario& other) = delete;
 	void operator=(const Usuario&) = delete;
+	unsigned int getUsuarioID() { return mID; };
 
 private:
 	static std::map<unsigned int, Usuario*> sInstances;

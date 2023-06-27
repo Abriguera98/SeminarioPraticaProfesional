@@ -144,6 +144,8 @@
     <ClCompile Include="UI\LoginFailedMessage.cpp" />
     <ClCompile Include="UI\LoginForm.cpp" />
     <ClCompile Include="UI\MainForm.cpp" />
+    <ClCompile Include="UI\NewEntryForm.cpp" />
+    <ClCompile Include="UI\NewProfileForm.cpp" />
     <ClCompile Include="UI\VisualizationForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +171,12 @@
     <ClInclude Include="UI\MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="UI\NewEntryForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="UI\NewProfileForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="UI\VisualizationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -185,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>UI\MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewEntryForm.resx">
+      <DependentUpon>UI\NewEntryForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewProfileForm.resx">
+      <DependentUpon>UI\NewProfileForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\VisualizationForm.resx">
       <DependentUpon>UI\VisualizationForm.h</DependentUpon>

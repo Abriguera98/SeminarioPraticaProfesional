@@ -15,6 +15,8 @@ public:
 	bool getActivo() { return mActivo; };
 	void setActivo(bool newState) { mActivo = newState; };
 
+	void ActualizarUltimaModificacion();
+
 private:
 	Voluntario* mVoluntario;
 	std::vector<Entrada*>* mEntradas;

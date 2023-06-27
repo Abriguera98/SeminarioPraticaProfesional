@@ -49,14 +49,12 @@ void StateMachine::doStep()
 	switch (mState)
 	{
 		case eInitializing:
-			/*
 			Step_Initializing();
 			break;
 		case eLogin:
 			Step_Login();
 			break;
 		case eMainScreen:
-		*/
 			Step_MainScreen();
 			break;
 		case eExit:
@@ -94,6 +92,11 @@ void StateMachine::getNextStep()
 		break;
 
 	case eMainScreen:
+		switch (guiResult) {
+		case GUIManager::Result::eClosed:
+			mState = eExit;
+			break;
+		}
 		break;
 
 	case eExit:

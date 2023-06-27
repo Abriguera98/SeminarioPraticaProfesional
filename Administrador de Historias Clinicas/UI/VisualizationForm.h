@@ -59,6 +59,9 @@ namespace UIForms {
 	private: System::Windows::Forms::Label^ lbDescription;
 	private: System::Windows::Forms::Button^ btBack;
 	private: System::Windows::Forms::ColumnHeader^ Fecha;
+	private: System::Windows::Forms::Label^ lbAuthor;
+	private: System::Windows::Forms::TextBox^ tbAuthor;
+
 
 	protected:
 
@@ -85,6 +88,8 @@ namespace UIForms {
 			this->tbDNI = (gcnew System::Windows::Forms::TextBox());
 			this->lbDescription = (gcnew System::Windows::Forms::Label());
 			this->btBack = (gcnew System::Windows::Forms::Button());
+			this->lbAuthor = (gcnew System::Windows::Forms::Label());
+			this->tbAuthor = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// lsvEnrtys
@@ -112,7 +117,7 @@ namespace UIForms {
 			this->tbDescription->Multiline = true;
 			this->tbDescription->Name = L"tbDescription";
 			this->tbDescription->ReadOnly = true;
-			this->tbDescription->Size = System::Drawing::Size(511, 430);
+			this->tbDescription->Size = System::Drawing::Size(511, 403);
 			this->tbDescription->TabIndex = 1;
 			// 
 			// lbVolunteer
@@ -177,12 +182,31 @@ namespace UIForms {
 			this->btBack->UseVisualStyleBackColor = true;
 			this->btBack->Click += gcnew System::EventHandler(this, &VisualizationForm::btBack_Click);
 			// 
+			// lbAuthor
+			// 
+			this->lbAuthor->AutoSize = true;
+			this->lbAuthor->Location = System::Drawing::Point(266, 481);
+			this->lbAuthor->Name = L"lbAuthor";
+			this->lbAuthor->Size = System::Drawing::Size(35, 13);
+			this->lbAuthor->TabIndex = 9;
+			this->lbAuthor->Text = L"Autor:";
+			// 
+			// tbAuthor
+			// 
+			this->tbAuthor->Location = System::Drawing::Point(307, 474);
+			this->tbAuthor->Name = L"tbAuthor";
+			this->tbAuthor->ReadOnly = true;
+			this->tbAuthor->Size = System::Drawing::Size(466, 20);
+			this->tbAuthor->TabIndex = 10;
+			// 
 			// VisualizationForm
 			// 
 			this->AcceptButton = this->btBack;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(786, 542);
+			this->Controls->Add(this->tbAuthor);
+			this->Controls->Add(this->lbAuthor);
 			this->Controls->Add(this->btBack);
 			this->Controls->Add(this->lbDescription);
 			this->Controls->Add(this->tbDNI);
@@ -201,20 +225,8 @@ namespace UIForms {
 
 		}
 #pragma endregion
-private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-	System::String^ description = "";
-	if (lsvEnrtys->SelectedItems->Count > 0)
-	{
-		description = mManagerInstance->getEntryDescriptionFromProfileDate(mProfileID, lsvEnrtys->SelectedItems[0]->Text);
-	}
-	this->tbDescription->Text = description;
-}
-private: System::Void VisualizationForm_Load(System::Object^ sender, System::EventArgs^ e) {
-
-	mManagerInstance->fillViewData(lsvEnrtys, mProfileID);
-}
-private: System::Void btBack_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
+private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void VisualizationForm_Load(System::Object^ sender, System::EventArgs^ e);
+private: System::Void btBack_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

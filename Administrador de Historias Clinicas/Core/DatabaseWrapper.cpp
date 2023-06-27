@@ -77,11 +77,24 @@ DatabaseWrapper::DatabaseWrapper()
 {
 }
 
-std::size_t DatabaseWrapper::GetUserLogin(const char* aUser)
+Usuario* DatabaseWrapper::GetLoggedUser(std::string user)
+{
+    SACommand cmd(&mConnection, _TSA(Constants::sqlGetUserAlias));
+    cmd.Param(1).setAsString() = user.c_str();
+    cmd.Execute();
+    cmd.FetchNext();
+
+    std::string alias(cmd.Field(1).asString());
+    unsigned int id(cmd.Field(2).asInt64());
+
+    return Usuario::getUsuario(alias, id);
+}
+
+std::size_t DatabaseWrapper::GetUserLogin(std::string aUser)
 {
     size_t result;
     SACommand cmd(&mConnection, _TSA(Constants::sqlGetUserLoginData));
-    cmd.Param(1).setAsString() = aUser;
+    cmd.Param(1).setAsString() = aUser.c_str();
     cmd.Execute();
     cmd.FetchNext();
 
@@ -105,9 +118,63 @@ System::String^ DatabaseWrapper::getEntryDescriptionFromProfileDate(unsigned int
     return gcnew System::String(cmdEntryDescription.Field(1).asString().GetMultiByteChars());
 }
 
+System::String^ DatabaseWrapper::getEntryAuthorFromProfileDate(unsigned int profileID, System::String^ date)
+{
+    SACommand cmdEntryDescription(&mConnection, _TSA(Constants::sqlGetEntryAuthorFromProfileDate));
+
+    std::string dateString = msclr::interop::marshal_as<std::string>(date).c_str();
+
+    cmdEntryDescription.Param(1).setAsInt64() = profileID;
+    cmdEntryDescription.Param(2).setAsString() = dateString.c_str();
+
+    cmdEntryDescription.Execute();
+    cmdEntryDescription.FetchNext();
+
+    return gcnew System::String(cmdEntryDescription.Field(1).asString().GetMultiByteChars());
+}
+
+
+
 void DatabaseWrapper::changeProfileState(unsigned int index)
 {
     SACommand cmdChangeProfileState(&mConnection, _TSA(Constants::sqlChangeProfileState));
     cmdChangeProfileState.Param(1).setAsInt64() = index;
     cmdChangeProfileState.Execute();
+}
+
+PerfilPsicologico* DatabaseWrapper::addNewEmptyProfile(System::String^ name, System::String^ lastName, System::String^ dni)
+{
+    std::string nameString = msclr::interop::marshal_as<std::string>(name).c_str();
+    std::string lastNameString = msclr::interop::marshal_as<std::string>(lastName).c_str();
+    std::string dniString = msclr::interop::marshal_as<std::string>(dni).c_str();
+
+    SACommand cmdChangeProfileState(&mConnection, _TSA(Constants::sqlCreateNewEmptyProfile));
+    cmdChangeProfileState.Param(1).setAsString() = nameString.c_str();
+    cmdChangeProfileState.Param(2).setAsString() = lastNameString.c_str();
+    cmdChangeProfileState.Param(3).setAsString() = dniString.c_str();
+    cmdChangeProfileState.Execute();
+
+    Voluntario* vol = new Voluntario(nameString, lastNameString, dniString);
+    std::vector<Entrada*>* ent = new std::vector<Entrada*>();
+    PerfilPsicologico* prof = new PerfilPsicologico(vol, ent, true);
+
+    return prof;
+}
+
+Entrada* DatabaseWrapper::addNewEntryToProfile(unsigned int index, System::String^ date, System::String^ description, Usuario* user)
+{
+    std::string dateString = msclr::interop::marshal_as<std::string>(date).c_str();
+    std::string descripcionString = msclr::interop::marshal_as<std::string>(description).c_str();
+
+    SACommand cmdInsertEntry(&mConnection, _TSA(Constants::sqlInsertEntry));
+
+    cmdInsertEntry.Param(1).setAsString() = dateString.c_str();
+    cmdInsertEntry.Param(2).setAsString() = descripcionString.c_str();
+    cmdInsertEntry.Param(3).setAsInt64() = user->getUsuarioID();
+    cmdInsertEntry.Param(4).setAsInt64() = index;
+
+    cmdInsertEntry.Execute();
+
+    Entrada* ent = new Entrada(dateString, descripcionString, user);
+    return ent;
 }

@@ -111,31 +111,14 @@ namespace UIForms {
 			this->Name = L"LandingForm";
 			this->Text = L"Sistema de Gestion de Historias Clinicas";
 			this->Closed += gcnew System::EventHandler(this, &LandingForm::UserClosing);
-			this->Load += gcnew System::EventHandler(this, &LandingForm::LandingForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
+		private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e);
+		private: System::Void UserClosing(System::Object^ sender, System::EventArgs^ e);
+		private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e);
 
-	private: System::Void UserClosing(System::Object^ sender, System::EventArgs^ e) {
-		if (!keepProcessing)
-		{
-			this->mManagerInstance->setResult(GUIManager::Result::eClosed);
-		}
-	}
-
-	private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e) {
-		keepProcessing = true;
-		this->mManagerInstance->setResult(GUIManager::Result::eProceedToLoginWindow);
-		this->Close();
-	}
-
-	private: System::Void LandingForm_Load(System::Object^ sender, System::EventArgs^ e) {
-
-	}
 	};
 }

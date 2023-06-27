@@ -103,9 +103,6 @@ namespace UIForms {
 
 		}
 #pragma endregion
-		private: System::Void btnAccept_Click(System::Object^ sender, System::EventArgs^ e) {
-			this->mManagerInstance->setResult(GUIManager::Result::eClosed);
-			this->Close();
-		}
+		private: System::Void btnAccept_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }

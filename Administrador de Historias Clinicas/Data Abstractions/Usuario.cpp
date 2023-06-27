@@ -15,3 +15,5 @@ Usuario::Usuario(const std::string& aAlias, unsigned int aID)
 	:mAlias(aAlias), mID(aID)
 {
 }
+
+

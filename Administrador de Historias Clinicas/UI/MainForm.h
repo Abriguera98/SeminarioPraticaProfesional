@@ -1,6 +1,8 @@
 #pragma once
 #include "../Core/GUIManager.h"
 #include "VisualizationForm.h"
+#include "NewEntryForm.h"
+#include "NewProfileForm.h"
 
 namespace UIForms {
 
@@ -154,6 +156,7 @@ namespace UIForms {
 			this->btnCreate->TabIndex = 3;
 			this->btnCreate->Text = L"Crear Nuevo Perfil";
 			this->btnCreate->UseVisualStyleBackColor = true;
+			this->btnCreate->Click += gcnew System::EventHandler(this, &MainForm::btnCreate_Click);
 			// 
 			// btnAdd
 			// 
@@ -164,6 +167,7 @@ namespace UIForms {
 			this->btnAdd->TabIndex = 5;
 			this->btnAdd->Text = L"Agregar Entrada";
 			this->btnAdd->UseVisualStyleBackColor = true;
+			this->btnAdd->Click += gcnew System::EventHandler(this, &MainForm::btnAdd_Click);
 			// 
 			// btnClose
 			// 
@@ -203,6 +207,7 @@ namespace UIForms {
 			this->Name = L"MainForm";
 			this->Text = L"MainScreen";
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
+			this->Closed += gcnew System::EventHandler(this, &MainForm::UserClosing);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -213,5 +218,9 @@ namespace UIForms {
 		private: System::Void btnView_Click(System::Object^ sender, System::EventArgs^ e);
 		private: System::Void btnClose_Click(System::Object^ sender, System::EventArgs^ e);
 		private: System::Void btnSearch_Click(System::Object^ sender, System::EventArgs^ e);
-};
+		private: System::Void btnCreate_Click(System::Object^ sender, System::EventArgs^ e);
+		private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e);
+		private: System::Void UserClosing(System::Object^ sender, System::EventArgs^ e);
+				
+	};
 }

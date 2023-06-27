@@ -81,6 +81,12 @@
     <ClInclude Include="UI\VisualizationForm.h">
       <Filter>Header Files\UI</Filter>
     </ClInclude>
+    <ClInclude Include="UI\NewEntryForm.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\NewProfileForm.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\DatabaseWrapper.cpp">
@@ -123,6 +129,12 @@
       <Filter>Source Files\Data Abstractions</Filter>
     </ClCompile>
     <ClCompile Include="UI\VisualizationForm.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\NewEntryForm.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\NewProfileForm.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
   </ItemGroup>
