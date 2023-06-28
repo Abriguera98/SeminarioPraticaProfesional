@@ -4,12 +4,12 @@
 
 #include "../Data Abstractions/PerfilPsicologico.h"
 
-class DatabaseWrapper {
+class DatabaseInterface {
 public:
-	static DatabaseWrapper* getInstance();
+	static DatabaseInterface* getInstance();
 
-	DatabaseWrapper(DatabaseWrapper& other) = delete;
-	void operator=(const DatabaseWrapper&) = delete;
+	DatabaseInterface(DatabaseInterface& other) = delete;
+	void operator=(const DatabaseInterface&) = delete;
 
 	void Connect();
 	std::map<unsigned int, PerfilPsicologico*>* getPerfiles();
@@ -21,8 +21,8 @@ public:
 	PerfilPsicologico* addNewEmptyProfile(System::String^ name, System::String^ lastName, System::String^ dni);
 	Entrada* addNewEntryToProfile(unsigned int index, System::String^ date, System::String^ description, Usuario* user);
 private:
-	static DatabaseWrapper* mInstance;
+	static DatabaseInterface* mInstance;
 
-	DatabaseWrapper();
+	DatabaseInterface();
 	SAConnection mConnection;
 };

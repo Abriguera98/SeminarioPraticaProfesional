@@ -1,0 +1,101 @@
+\doxysection{Login\+Failed\+Message.\+h}
+\hypertarget{_login_failed_message_8h_source}{}\label{_login_failed_message_8h_source}\index{X:/UI/LoginFailedMessage.h@{X:/UI/LoginFailedMessage.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Core/GUIManager.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }UIForms\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::ComponentModel;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Collections;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Windows::Forms;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Data;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Drawing;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public\ ref\ class}\ \mbox{\hyperlink{class_u_i_forms_1_1_login_failed_message}{LoginFailedMessage}}\ :\ \textcolor{keyword}{public}\ System::Windows::Forms::Form}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_login_failed_message}{LoginFailedMessage}}(\mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ parent)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ :\ mManagerInstance(parent)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ the\ constructor\ code\ here}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_login_failed_message_ab3f06c2d170fd69fef05fb712670f13d}{\string~LoginFailedMessage}}()}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (components)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ components;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:\ \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ mManagerInstance;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnAccept;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbInfo;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ System::ComponentModel::Container\string^\ components;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#pragma\ region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeComponent(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>SuspendLayout();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnAccept}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Location\ =\ System::Drawing::Point(142,\ 37);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnAccept"{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>TabIndex\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Text\ =\ L\textcolor{stringliteral}{"{}Aceptar"{}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&LoginFailedMessage::btnAccept\_Click);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbInfo}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo-\/>Location\ =\ System::Drawing::Point(65,\ 17);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbInfo"{}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo-\/>Size\ =\ System::Drawing::Size(235,\ 13);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo-\/>TabIndex\ =\ 1;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbInfo-\/>Text\ =\ L\textcolor{stringliteral}{"{}El\ nombre\ de\ usuario\ o\ contraseña es\ incorrecto"{}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LoginFailedMessage}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AcceptButton\ =\ this-\/>btnAccept;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleDimensions\ =\ System::Drawing::SizeF(6,\ 13);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleMode\ =\ System::Windows::Forms::AutoScaleMode::Font;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ClientSize\ =\ System::Drawing::Size(370,\ 72);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ControlBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbInfo);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnAccept);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>FormBorderStyle\ =\ System::Windows::Forms::FormBorderStyle::FixedToolWindow;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>MinimizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Name\ =\ L\textcolor{stringliteral}{"{}LoginFailedMessage"{}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Text\ =\ L\textcolor{stringliteral}{"{}Error\ al\ inciar\ sesion"{}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>PerformLayout();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ btnAccept\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00107\ \ \ \ \ \};}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}

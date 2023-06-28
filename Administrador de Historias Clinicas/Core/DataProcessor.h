@@ -8,20 +8,12 @@
 
 class DataProcessor {
 public:
-	enum Result {
-		eNotSet = 0
-	};
 
 	//Singleton Definition
 	static DataProcessor* getInstance();
 	static Usuario* mLoggedUser;
 	DataProcessor(DataProcessor& other) = delete;
 	void operator=(const DataProcessor&) = delete;
-
-	//Result Handling
-	void resetResult() { mResult = eNotSet; };
-	void setResult(Result value) { mResult = value; };
-	Result getResult() { return mResult; };
 
 	bool attemptLogin();
 	void fillPerfiles();
@@ -37,7 +29,6 @@ public:
 private:
 	std::map<unsigned int, PerfilPsicologico*>* mPerfiles;
 	static DataProcessor* mInstance;
-	DatabaseWrapper* mDatabaseWrapper;
-	Result mResult;
+	DatabaseInterface* mDatabaseWrapper;
 	DataProcessor();
 };

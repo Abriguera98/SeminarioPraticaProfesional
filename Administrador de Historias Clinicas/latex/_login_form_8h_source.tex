@@ -1,0 +1,158 @@
+\doxysection{Login\+Form.\+h}
+\hypertarget{_login_form_8h_source}{}\label{_login_form_8h_source}\index{X:/UI/LoginForm.h@{X:/UI/LoginForm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <msclr\(\backslash\)marshal\_cppstd.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../Core/Constants.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../Core/GUIManager.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../Core/StateMachine.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }UIForms\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::ComponentModel;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Collections;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Windows::Forms;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Data;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Drawing;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public\ ref\ class}\ \mbox{\hyperlink{class_u_i_forms_1_1_login_form}{LoginForm}}\ :\ \textcolor{keyword}{public}\ System::Windows::Forms::Form}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_login_form}{LoginForm}}(\mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ parent)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ :\ mManagerInstance(parent)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ the\ constructor\ code\ here}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_login_form_af8fccd9985ce686916c18f3ffce53aac}{\string~LoginForm}}()}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (components)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ components;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:\ \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ mManagerInstance;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbUser;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbPassword;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbUser;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbPass;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnCancel;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnAccept;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ System::ComponentModel::Container\ \string^components;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#pragma\ region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeComponent(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbUser\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbPassword\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>SuspendLayout();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbUser}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbUser-\/>Location\ =\ System::Drawing::Point(12,\ 41);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbUser-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbUser"{}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbUser-\/>Size\ =\ System::Drawing::Size(385,\ 20);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbUser-\/>TabIndex\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbPassword}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbPassword-\/>Location\ =\ System::Drawing::Point(12,\ 92);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbPassword-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbPassword"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbPassword-\/>PasswordChar\ =\ \textcolor{charliteral}{'*'};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbPassword-\/>Size\ =\ System::Drawing::Size(385,\ 20);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbPassword-\/>TabIndex\ =\ 1;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbUser}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser-\/>Location\ =\ System::Drawing::Point(12,\ 25);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbUser"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser-\/>Size\ =\ System::Drawing::Size(46,\ 13);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser-\/>TabIndex\ =\ 3;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbUser-\/>Text\ =\ L\textcolor{stringliteral}{"{}Usuario:"{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbPass}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass-\/>Location\ =\ System::Drawing::Point(9,\ 76);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbPass"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass-\/>Size\ =\ System::Drawing::Size(64,\ 13);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass-\/>TabIndex\ =\ 4;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbPass-\/>Text\ =\ L\textcolor{stringliteral}{"{}Contraseña:"{}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnCancel}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>DialogResult\ =\ System::Windows::Forms::DialogResult::Cancel;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Location\ =\ System::Drawing::Point(12,\ 164);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnCancel"{}};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>TabIndex\ =\ 5;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Text\ =\ L\textcolor{stringliteral}{"{}Cancelar"{}};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&LoginForm::btnCancel\_Click);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnAccept}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Location\ =\ System::Drawing::Point(322,\ 164);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnAccept"{}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>TabIndex\ =\ 6;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Text\ =\ L\textcolor{stringliteral}{"{}Aceptar"{}};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&LoginForm::btnAccept\_Click);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LoginForm}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AcceptButton\ =\ this-\/>btnAccept;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleDimensions\ =\ System::Drawing::SizeF(6,\ 13);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleMode\ =\ System::Windows::Forms::AutoScaleMode::Font;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>CancelButton\ =\ this-\/>btnCancel;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ClientSize\ =\ System::Drawing::Size(409,\ 199);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnAccept);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnCancel);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbPass);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbUser);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbPassword);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbUser);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>FormBorderStyle\ =\ System::Windows::Forms::FormBorderStyle::FixedSingle;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>MinimizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Name\ =\ L\textcolor{stringliteral}{"{}LoginForm"{}};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Text\ =\ L\textcolor{stringliteral}{"{}LoginForm"{}};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>PerformLayout();}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>FormClosing\ +=\ gcnew\ System::Windows::Forms::FormClosingEventHandler(\textcolor{keyword}{this},\ \&LoginForm::FormClosingHandler);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ btnAccept\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{keywordtype}{void}\ FormClosingHandler(System::Object\string^\ sender,\ System::Windows::Forms::FormClosingEventArgs\string^\ e);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ btnCancel\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00164\ \ \ \ \ \};}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}

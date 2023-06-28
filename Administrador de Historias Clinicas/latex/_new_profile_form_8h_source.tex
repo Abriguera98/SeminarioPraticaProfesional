@@ -1,0 +1,180 @@
+\doxysection{New\+Profile\+Form.\+h}
+\hypertarget{_new_profile_form_8h_source}{}\label{_new_profile_form_8h_source}\index{X:/UI/NewProfileForm.h@{X:/UI/NewProfileForm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../Core/GUIManager.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }UIForms\ \{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::ComponentModel;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Collections;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Windows::Forms;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Data;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Drawing;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public\ ref\ class}\ \mbox{\hyperlink{class_u_i_forms_1_1_new_profile_form}{NewProfileForm}}\ :\ \textcolor{keyword}{public}\ System::Windows::Forms::Form}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_new_profile_form}{NewProfileForm}}(\mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ parent)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ :\ mManagerInstance(parent)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ the\ constructor\ code\ here}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_new_profile_form_a19849acc25d72e4e20240c84c807336a}{\string~NewProfileForm}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (components)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ components;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{private}:\ \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ mManagerInstance;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbName;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbName;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbLastName;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbLastName;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbDNI;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbDNI;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ label4;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnAccept;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnCancel;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ System::ComponentModel::Container\ \string^components;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#pragma\ region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeComponent(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbName\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbLastName\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>SuspendLayout();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbName}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName-\/>Location\ =\ System::Drawing::Point(12,\ 33);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbName"{}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName-\/>Size\ =\ System::Drawing::Size(47,\ 13);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName-\/>TabIndex\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbName-\/>Text\ =\ L\textcolor{stringliteral}{"{}Nombre:"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbName}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbName-\/>Location\ =\ System::Drawing::Point(12,\ 49);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbName-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbName"{}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbName-\/>Size\ =\ System::Drawing::Size(373,\ 20);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbName-\/>TabIndex\ =\ 1;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbLastName}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbLastName-\/>Location\ =\ System::Drawing::Point(12,\ 88);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbLastName-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbLastName"{}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbLastName-\/>Size\ =\ System::Drawing::Size(373,\ 20);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbLastName-\/>TabIndex\ =\ 3;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbLastName}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName-\/>Location\ =\ System::Drawing::Point(12,\ 72);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbLastName"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName-\/>Size\ =\ System::Drawing::Size(47,\ 13);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName-\/>TabIndex\ =\ 2;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbLastName-\/>Text\ =\ L\textcolor{stringliteral}{"{}Apellido:"{}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbDNI}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Location\ =\ System::Drawing::Point(12,\ 129);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>MaxLength\ =\ 10;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbDNI"{}};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Size\ =\ System::Drawing::Size(373,\ 20);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>TabIndex\ =\ 5;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbDNI}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Location\ =\ System::Drawing::Point(12,\ 113);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbDNI"{}};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Size\ =\ System::Drawing::Size(29,\ 13);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>TabIndex\ =\ 4;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Text\ =\ L\textcolor{stringliteral}{"{}DNI:"{}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ label4}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4-\/>Location\ =\ System::Drawing::Point(120,\ 9);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4-\/>Name\ =\ L\textcolor{stringliteral}{"{}label4"{}};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4-\/>Size\ =\ System::Drawing::Size(154,\ 13);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4-\/>TabIndex\ =\ 6;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>label4-\/>Text\ =\ L\textcolor{stringliteral}{"{}Ingrese\ los\ datos\ del\ Voluntario"{}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnAccept}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Location\ =\ System::Drawing::Point(310,\ 164);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnAccept"{}};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>TabIndex\ =\ 7;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Text\ =\ L\textcolor{stringliteral}{"{}Aceptar"{}};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnAccept-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&NewProfileForm::btnAccept\_Click);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnCancel}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>DialogResult\ =\ System::Windows::Forms::DialogResult::Cancel;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Location\ =\ System::Drawing::Point(12,\ 164);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnCancel"{}};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>TabIndex\ =\ 8;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>Text\ =\ L\textcolor{stringliteral}{"{}Cancelar"{}};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnCancel-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NewProfileForm}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AcceptButton\ =\ this-\/>btnAccept;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleDimensions\ =\ System::Drawing::SizeF(6,\ 13);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleMode\ =\ System::Windows::Forms::AutoScaleMode::Font;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>CancelButton\ =\ this-\/>btnCancel;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ClientSize\ =\ System::Drawing::Size(397,\ 202);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnCancel);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnAccept);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>label4);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbDNI);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbDNI);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbLastName);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbLastName);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbName);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbName);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>FormBorderStyle\ =\ System::Windows::Forms::FormBorderStyle::FixedSingle;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Name\ =\ L\textcolor{stringliteral}{"{}NewProfileForm"{}};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Text\ =\ L\textcolor{stringliteral}{"{}Crear\ Perfil"{}};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>PerformLayout();}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ btnAccept\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00186\ \};}
+\DoxyCodeLine{00187\ \}}
+
+\end{DoxyCode}

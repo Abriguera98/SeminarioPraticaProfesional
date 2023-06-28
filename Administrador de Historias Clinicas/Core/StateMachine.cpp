@@ -9,8 +9,7 @@ std::map<std::string, std::string>* StateMachine::mDataMap = new std::map<std::s
 StateMachine::StateMachine()
 	: mState(eInitializing)
 {
-	mDataProcessor = DataProcessor::getInstance();
-	mGUIManager = GUIManager::getInstance(mDataProcessor);
+	mGUIManager = GUIManager::getInstance(DataProcessor::getInstance());
 }
 
 StateMachine* StateMachine::getInstance()
@@ -65,7 +64,6 @@ void StateMachine::doStep()
 void StateMachine::getNextStep()
 {
 	GUIManager::Result guiResult = mGUIManager->getResult();
-	DataProcessor::Result dataResult = mDataProcessor->getResult();
 
 	switch (mState)
 	{
@@ -102,9 +100,7 @@ void StateMachine::getNextStep()
 	case eExit:
 		break;
 	}
-
 	mGUIManager->resetResult();
-	mDataProcessor->resetResult();
 }
 
 void StateMachine::Step_Initializing()
@@ -117,13 +113,7 @@ void StateMachine::Step_Login()
 	mGUIManager->ShowLoginScreen();
 }
 
-void StateMachine::Step_LoginFailed()
-{
-	mGUIManager->ShowLoginFailed();
-}
-
 void StateMachine::Step_MainScreen()
 {
-	mDataProcessor->fillPerfiles();
 	mGUIManager->ShowMainScreen();
 }

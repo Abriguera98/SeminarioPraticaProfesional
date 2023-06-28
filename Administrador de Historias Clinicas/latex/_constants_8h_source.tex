@@ -1,0 +1,27 @@
+\doxysection{Constants.\+h}
+\hypertarget{_constants_8h_source}{}\label{_constants_8h_source}\index{X:/Core/Constants.h@{X:/Core/Constants.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Constants\ \{}
+\DoxyCodeLine{00006\ \textcolor{comment}{//Data\ Map}}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ strUserKey\ =\ \textcolor{stringliteral}{"{}Username"{}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ strPassKey\ =\ \textcolor{stringliteral}{"{}Password"{}};}
+\DoxyCodeLine{00009\ \textcolor{comment}{//SQL\ Procedures}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetUserLoginData[]\ =\ \textcolor{stringliteral}{"{}SELECT\ Clave\ FROM\ Usuarios\ WHERE\ Usuario=:1"{}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetUserAlias[]\ =\ \textcolor{stringliteral}{"{}SELECT\ Alias,\ UsuarioID\ FROM\ Usuarios\ WHERE\ Usuario=:1"{}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetProfiles[]\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ PerfilesPsicologicos\ ORDER\ BY\ PerfilID"{}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetEntrysForProfile[]\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ Entradas\ WHERE\ PerfilID=:1\ ORDER\ BY\ Fecha\ DESC"{}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetVolunteer[]\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ Voluntarios\ WHERE\ DNI=:1"{}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetEntryDescriptionFromProfileDate[]\ =\ \textcolor{stringliteral}{"{}SELECT\ Entradas.Descripcion\ FROM\ Entradas\ INNER\ JOIN\ PerfilesPsicologicos\ ON\ Entradas.PerfilID=PerfilesPsicologicos.PerfilID\ WHERE\ PerfilesPsicologicos.PerfilID=:1\ AND\ Entradas.Fecha=:2\ "{}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetEntryAuthorFromProfileDate[]\ =\ \textcolor{stringliteral}{"{}SELECT\ Usuarios.Alias\ FROM\ Usuarios\ INNER\ JOIN\ Entradas\ ON\ Usuarios.UsuarioID=Entradas.UsuarioID\ INNER\ JOIN\ PerfilesPsicologicos\ ON\ Entradas.PerfilID=PerfilesPsicologicos.PerfilID\ WHERE\ PerfilesPsicologicos.PerfilID=:1\ AND\ Entradas.Fecha=:2;"{}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlChangeProfileState[]\ =\ \textcolor{stringliteral}{"{}UPDATE\ PerfilesPsicologicos\ SET\ Activa=((Activa\ |\ 1)\ -\/\ (Activa\ \&\ 1))\ WHERE\ PerfilID=:1"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlCreateNewEmptyProfile[]\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ Voluntarios\ (DNI,\ Nombre,\ Apellido)\ VALUES\ (:3,\ :1,\ :2);\ INSERT\ INTO\ PerfilesPsicologicos\ (VoluntarioDNI,\ Activa)\ VALUES\ (:3\ ,\ 1)"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlGetUserFullData[]\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ Usuarios\ WHERE\ Usuario=:1"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ sqlInsertEntry[]\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ Entradas\ (Fecha,\ Descripcion,\ UsuarioID,\ PerfilID)\ VALUES\ (:1,\ :2,\ :3,\ :4)"{}};}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}

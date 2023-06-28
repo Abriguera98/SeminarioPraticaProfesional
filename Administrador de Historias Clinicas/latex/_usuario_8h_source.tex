@@ -1,0 +1,23 @@
+\doxysection{Usuario.\+h}
+\hypertarget{_usuario_8h_source}{}\label{_usuario_8h_source}\index{X:/Data Abstractions/Usuario.h@{X:/Data Abstractions/Usuario.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_usuario}{Usuario}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_usuario}{Usuario}}*\ getUsuario(\textcolor{keyword}{const}\ std::string\&\ aAlias,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ aID);}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_usuario}{Usuario}}(\mbox{\hyperlink{class_usuario}{Usuario}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_usuario}{Usuario}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getUsuarioID()\ \{\ \textcolor{keywordflow}{return}\ mID;\ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ std::map<unsigned\ int,\ Usuario*>\ sInstances;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_usuario}{Usuario}}(\textcolor{keyword}{const}\ std::string\&\ aAlias,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ aID);}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ mAlias;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mID;}
+\DoxyCodeLine{00017\ \};}
+
+\end{DoxyCode}

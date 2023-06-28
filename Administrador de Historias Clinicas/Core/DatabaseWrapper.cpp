@@ -10,18 +10,18 @@
 #include "../Data Abstractions/Usuario.h"
 #include "../Data Abstractions/Voluntario.h"
 
-DatabaseWrapper* DatabaseWrapper::mInstance = nullptr;
+DatabaseInterface* DatabaseInterface::mInstance = nullptr;
 
-DatabaseWrapper* DatabaseWrapper::getInstance()
+DatabaseInterface* DatabaseInterface::getInstance()
 {
 	if (mInstance == nullptr)
 	{
-		mInstance = new DatabaseWrapper();
+		mInstance = new DatabaseInterface();
 	}
 	return mInstance;
 }
 
-void DatabaseWrapper::Connect()
+void DatabaseInterface::Connect()
 {
     try
     {
@@ -33,7 +33,7 @@ void DatabaseWrapper::Connect()
     }
 }
 
-std::map<unsigned int, PerfilPsicologico*>* DatabaseWrapper::getPerfiles()
+std::map<unsigned int, PerfilPsicologico*>* DatabaseInterface::getPerfiles()
 {
     std::map<unsigned int, PerfilPsicologico*>* result = new std::map<unsigned int, PerfilPsicologico*>();
 
@@ -73,11 +73,11 @@ std::map<unsigned int, PerfilPsicologico*>* DatabaseWrapper::getPerfiles()
     return result;
 }
 
-DatabaseWrapper::DatabaseWrapper()
+DatabaseInterface::DatabaseInterface()
 {
 }
 
-Usuario* DatabaseWrapper::GetLoggedUser(std::string user)
+Usuario* DatabaseInterface::GetLoggedUser(std::string user)
 {
     SACommand cmd(&mConnection, _TSA(Constants::sqlGetUserAlias));
     cmd.Param(1).setAsString() = user.c_str();
@@ -90,7 +90,7 @@ Usuario* DatabaseWrapper::GetLoggedUser(std::string user)
     return Usuario::getUsuario(alias, id);
 }
 
-std::size_t DatabaseWrapper::GetUserLogin(std::string aUser)
+std::size_t DatabaseInterface::GetUserLogin(std::string aUser)
 {
     size_t result;
     SACommand cmd(&mConnection, _TSA(Constants::sqlGetUserLoginData));
@@ -103,7 +103,7 @@ std::size_t DatabaseWrapper::GetUserLogin(std::string aUser)
     return result;
 }
 
-System::String^ DatabaseWrapper::getEntryDescriptionFromProfileDate(unsigned int profileID, System::String^ date)
+System::String^ DatabaseInterface::getEntryDescriptionFromProfileDate(unsigned int profileID, System::String^ date)
 {
     SACommand cmdEntryDescription(&mConnection, _TSA(Constants::sqlGetEntryDescriptionFromProfileDate));
 
@@ -118,7 +118,7 @@ System::String^ DatabaseWrapper::getEntryDescriptionFromProfileDate(unsigned int
     return gcnew System::String(cmdEntryDescription.Field(1).asString().GetMultiByteChars());
 }
 
-System::String^ DatabaseWrapper::getEntryAuthorFromProfileDate(unsigned int profileID, System::String^ date)
+System::String^ DatabaseInterface::getEntryAuthorFromProfileDate(unsigned int profileID, System::String^ date)
 {
     SACommand cmdEntryDescription(&mConnection, _TSA(Constants::sqlGetEntryAuthorFromProfileDate));
 
@@ -135,14 +135,14 @@ System::String^ DatabaseWrapper::getEntryAuthorFromProfileDate(unsigned int prof
 
 
 
-void DatabaseWrapper::changeProfileState(unsigned int index)
+void DatabaseInterface::changeProfileState(unsigned int index)
 {
     SACommand cmdChangeProfileState(&mConnection, _TSA(Constants::sqlChangeProfileState));
     cmdChangeProfileState.Param(1).setAsInt64() = index;
     cmdChangeProfileState.Execute();
 }
 
-PerfilPsicologico* DatabaseWrapper::addNewEmptyProfile(System::String^ name, System::String^ lastName, System::String^ dni)
+PerfilPsicologico* DatabaseInterface::addNewEmptyProfile(System::String^ name, System::String^ lastName, System::String^ dni)
 {
     std::string nameString = msclr::interop::marshal_as<std::string>(name).c_str();
     std::string lastNameString = msclr::interop::marshal_as<std::string>(lastName).c_str();
@@ -161,7 +161,7 @@ PerfilPsicologico* DatabaseWrapper::addNewEmptyProfile(System::String^ name, Sys
     return prof;
 }
 
-Entrada* DatabaseWrapper::addNewEntryToProfile(unsigned int index, System::String^ date, System::String^ description, Usuario* user)
+Entrada* DatabaseInterface::addNewEntryToProfile(unsigned int index, System::String^ date, System::String^ description, Usuario* user)
 {
     std::string dateString = msclr::interop::marshal_as<std::string>(date).c_str();
     std::string descripcionString = msclr::interop::marshal_as<std::string>(description).c_str();

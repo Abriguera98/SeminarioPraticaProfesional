@@ -1,0 +1,25 @@
+\doxysection{Voluntario.\+h}
+\hypertarget{_voluntario_8h_source}{}\label{_voluntario_8h_source}\index{X:/Data Abstractions/Voluntario.h@{X:/Data Abstractions/Voluntario.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_voluntario}{Voluntario}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_voluntario}{Voluntario}}(\textcolor{keyword}{const}\ std::string\&\ aNombre,\ \textcolor{keyword}{const}\ std::string\&\ aApellido,\ \textcolor{keyword}{const}\ std::string\&\ aDNI);}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_voluntario}{Voluntario}}(\mbox{\hyperlink{class_voluntario}{Voluntario}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_voluntario}{Voluntario}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00010\ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ std::string\ getNombre()\ \{\ \textcolor{keywordflow}{return}\ mNombre;\ \ \};}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ getApellido()\ \{\textcolor{keywordflow}{return}\ mApellido;\};}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ getDNI()\ \{\textcolor{keywordflow}{return}\ mDNI;\};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ mNombre;}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ mApellido;}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ mDNI;}
+\DoxyCodeLine{00019\ \};}
+
+\end{DoxyCode}

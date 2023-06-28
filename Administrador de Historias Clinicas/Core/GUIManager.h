@@ -25,15 +25,14 @@ public:
 	void resetResult() { mResult = eNotSet; };
 	void setResult(Result value) { mResult = value; };
 	Result getResult() { return mResult; };
-	void addNewEmptyProfile(System::String^ name, System::String^ lastName, System::String^ dni);
 
 	//Windows to show
 	void ShowLandingScreen();
 	void ShowLoginScreen();
-	void ShowLoginFailed();
 	void ShowMainScreen();
 
 	bool attemptLogin();
+	void addNewEmptyProfile(System::String^ name, System::String^ lastName, System::String^ dni);
 	void fillMainData(System::Windows::Forms::ListView^ list);
 	void reloadView(System::Windows::Forms::ListView^ list);
 	void reloadRow(System::Windows::Forms::ListView^ list, unsigned int index);

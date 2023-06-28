@@ -1,0 +1,117 @@
+\doxysection{Landing\+Form.\+h}
+\hypertarget{_landing_form_8h_source}{}\label{_landing_form_8h_source}\index{X:/UI/LandingForm.h@{X:/UI/LandingForm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../Core/Constants.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Core/GUIManager.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Core/StateMachine.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }UIForms\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::ComponentModel;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Collections;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Windows::Forms;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Data;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Drawing;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public\ ref\ class}\ \mbox{\hyperlink{class_u_i_forms_1_1_landing_form}{LandingForm}}\ :\ \textcolor{keyword}{public}\ System::Windows::Forms::Form\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_landing_form}{LandingForm}}(\mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ parent)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ :\ mManagerInstance(parent)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ the\ constructor\ code\ here}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_landing_form_adc7cdcb91ef6a19bb833bbf52943820b}{\string~LandingForm}}()}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (components)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ components;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnLogin;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btnExit;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbWelcome;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{private}:\ \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ mManagerInstance;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{keywordtype}{bool}\ keepProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ System::ComponentModel::Container\string^\ components;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#pragma\ region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeComponent(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>SuspendLayout();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnLogin}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>Location\ =\ System::Drawing::Point(354,\ 51);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnLogin"{}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>TabIndex\ =\ 0;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>Text\ =\ L\textcolor{stringliteral}{"{}Ingresar"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnLogin-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&LandingForm::btnLogin\_Click);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnExit}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>Location\ =\ System::Drawing::Point(12,\ 51);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>Name\ =\ L\textcolor{stringliteral}{"{}btnExit"{}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>TabIndex\ =\ 1;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>Text\ =\ L\textcolor{stringliteral}{"{}Salir"{}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btnExit-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&LandingForm::btnExit\_Click);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbWelcome}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome-\/>Location\ =\ System::Drawing::Point(90,\ 22);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbWelcome"{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome-\/>Size\ =\ System::Drawing::Size(262,\ 13);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome-\/>TabIndex\ =\ 2;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbWelcome-\/>Text\ =\ L\textcolor{stringliteral}{"{}Bienvenido\ al\ Sistema\ de\ Gestion\ de\ Historias\ Clinicas"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LandingForm}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleDimensions\ =\ System::Drawing::SizeF(6,\ 13);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleMode\ =\ System::Windows::Forms::AutoScaleMode::Font;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>BackColor\ =\ System::Drawing::SystemColors::Control;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ClientSize\ =\ System::Drawing::Size(441,\ 88);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbWelcome);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnExit);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btnLogin);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>FormBorderStyle\ =\ System::Windows::Forms::FormBorderStyle::FixedSingle;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Name\ =\ L\textcolor{stringliteral}{"{}LandingForm"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Text\ =\ L\textcolor{stringliteral}{"{}Sistema\ de\ Gestion\ de\ Historias\ Clinicas"{}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Closed\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&LandingForm::UserClosing);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>PerformLayout();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ btnExit\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ UserClosing(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ System::Void\ btnLogin\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \};}
+\DoxyCodeLine{00124\ \}}
+
+\end{DoxyCode}

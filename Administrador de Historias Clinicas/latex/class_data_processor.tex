@@ -1,0 +1,78 @@
+\doxysection{Data\+Processor Class Reference}
+\hypertarget{class_data_processor}{}\label{class_data_processor}\index{DataProcessor@{DataProcessor}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_data_processor_a7962c4abf739e4c6417619b383c2d7c6}\label{class_data_processor_a7962c4abf739e4c6417619b383c2d7c6} 
+enum {\bfseries Result} \{ {\bfseries e\+Not\+Set} = 0
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_data_processor_a00fe3c03495e892b67723bca54931eea}\label{class_data_processor_a00fe3c03495e892b67723bca54931eea} 
+{\bfseries Data\+Processor} (\mbox{\hyperlink{class_data_processor}{Data\+Processor}} \&other)=delete
+\item 
+\Hypertarget{class_data_processor_a8a571d35963bdf74a4a903b8ab02621c}\label{class_data_processor_a8a571d35963bdf74a4a903b8ab02621c} 
+void {\bfseries operator=} (const \mbox{\hyperlink{class_data_processor}{Data\+Processor}} \&)=delete
+\item 
+\Hypertarget{class_data_processor_a322cba44ba38d91d8ae76bec80df08f5}\label{class_data_processor_a322cba44ba38d91d8ae76bec80df08f5} 
+void {\bfseries reset\+Result} ()
+\item 
+\Hypertarget{class_data_processor_aa9eb90620f82e97d12029c97d1203315}\label{class_data_processor_aa9eb90620f82e97d12029c97d1203315} 
+void {\bfseries set\+Result} (Result value)
+\item 
+\Hypertarget{class_data_processor_ab0157fd369e23fc2a7cd32d120c4318e}\label{class_data_processor_ab0157fd369e23fc2a7cd32d120c4318e} 
+Result {\bfseries get\+Result} ()
+\item 
+\Hypertarget{class_data_processor_a4cba7e54426aaebcb8c6a47a94226284}\label{class_data_processor_a4cba7e54426aaebcb8c6a47a94226284} 
+bool {\bfseries attempt\+Login} ()
+\item 
+\Hypertarget{class_data_processor_acaa4c9d81bd87589505abf0ba2096a15}\label{class_data_processor_acaa4c9d81bd87589505abf0ba2096a15} 
+void {\bfseries fill\+Perfiles} ()
+\item 
+\Hypertarget{class_data_processor_ad664c9785f7a15b7eb7209bbfb782c6c}\label{class_data_processor_ad664c9785f7a15b7eb7209bbfb782c6c} 
+void {\bfseries fill\+Main\+Data} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list)
+\item 
+\Hypertarget{class_data_processor_ae6e5f5cb822acc9187ce80027040e03d}\label{class_data_processor_ae6e5f5cb822acc9187ce80027040e03d} 
+void {\bfseries reload\+View} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list)
+\item 
+\Hypertarget{class_data_processor_ab8a429a5c55a72082216ff37810b938c}\label{class_data_processor_ab8a429a5c55a72082216ff37810b938c} 
+void {\bfseries reload\+Row} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list, unsigned int index)
+\item 
+\Hypertarget{class_data_processor_a53a4de36bb976ed2b1473b3fe5fb7d68}\label{class_data_processor_a53a4de36bb976ed2b1473b3fe5fb7d68} 
+void {\bfseries fill\+View\+Data} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list, unsigned int profile)
+\item 
+\Hypertarget{class_data_processor_a1e579079793dd7fa97b7437194e1f856}\label{class_data_processor_a1e579079793dd7fa97b7437194e1f856} 
+System\+::\+String {\bfseries get\+Entry\+Author\+From\+Profile\+Date} (unsigned int profile\+ID, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date)
+\item 
+\Hypertarget{class_data_processor_ab69229cdfa72a4c75289157bce0876a8}\label{class_data_processor_ab69229cdfa72a4c75289157bce0876a8} 
+System\+::\+String {\bfseries get\+Entry\+Description\+From\+Profile\+Date} (unsigned int profile\+ID, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date)
+\item 
+\Hypertarget{class_data_processor_a78c714f5ba38f0958308f7dab9bc016d}\label{class_data_processor_a78c714f5ba38f0958308f7dab9bc016d} 
+void {\bfseries change\+Profile\+State} (unsigned int index)
+\item 
+\Hypertarget{class_data_processor_aba778b3eccbf8788eae06f33cc96785f}\label{class_data_processor_aba778b3eccbf8788eae06f33cc96785f} 
+void {\bfseries add\+New\+Empty\+Profile} (System\+::\+String\texorpdfstring{$^\wedge$}{\string^} name, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} last\+Name, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} dni)
+\item 
+\Hypertarget{class_data_processor_a13a81af008bee4f384a6efd9f175147f}\label{class_data_processor_a13a81af008bee4f384a6efd9f175147f} 
+void {\bfseries add\+New\+Entry\+To\+Profile} (unsigned int index, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} description)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_data_processor_a988fc45c7ae432fe0358c79f31886479}\label{class_data_processor_a988fc45c7ae432fe0358c79f31886479} 
+static \mbox{\hyperlink{class_data_processor}{Data\+Processor}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_data_processor_ab9260cf0ff8a70fe3710b651bdf5915f}\label{class_data_processor_ab9260cf0ff8a70fe3710b651bdf5915f} 
+static \mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Logged\+User} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+X\+:/\+Core/Data\+Processor.\+h\item 
+X\+:/\+Core/Data\+Processor.\+cpp\end{DoxyCompactItemize}

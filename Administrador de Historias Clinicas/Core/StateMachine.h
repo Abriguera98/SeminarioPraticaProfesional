@@ -31,7 +31,7 @@ private:
 	static std::map<std::string, std::string>* mDataMap;
 
 	GUIManager* mGUIManager;
-	DataProcessor* mDataProcessor;
+	//DataProcessor* mDataProcessor;
 	StateMachine();
 
 	State mState;
@@ -41,6 +41,5 @@ private:
 
 	void Step_Initializing();
 	void Step_Login();
-	void Step_LoginFailed();
 	void Step_MainScreen();
 };

@@ -1,0 +1,225 @@
+\doxysection{Visualization\+Form.\+h}
+\hypertarget{_visualization_form_8h_source}{}\label{_visualization_form_8h_source}\index{X:/UI/VisualizationForm.h@{X:/UI/VisualizationForm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../Core/GUIManager.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }UIForms\ \{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::ComponentModel;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Collections;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Windows::Forms;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Data;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }System::Drawing;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public\ ref\ class}\ \mbox{\hyperlink{class_u_i_forms_1_1_visualization_form}{VisualizationForm}}\ :\ \textcolor{keyword}{public}\ System::Windows::Forms::Form}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_visualization_form}{VisualizationForm}}(\mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ parent,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ profileID)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ :\ mManagerInstance(parent),\ mProfileID(profileID)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ the\ constructor\ code\ here}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setVolunteerData(System::String\string^\ aVolunteerName,\ System::String\string^\ aDNI)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer-\/>Text\ =\ aVolunteerName;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Text\ =\ aDNI;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_forms_1_1_visualization_form_ac873988a6eb5b4ed7b1ea564ba79196a}{\string~VisualizationForm}}()}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (components)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ components;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{private}:\ \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}}*\ mManagerInstance;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mProfileID;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::ListView\string^\ lsvEnrtys;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbDescription;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbVolunteer;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbDNI;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbEntrys;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbVolunteer;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbDNI;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbDescription;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Button\string^\ btBack;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::ColumnHeader\string^\ Fecha;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::Label\string^\ lbAuthor;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{private}:\ System::Windows::Forms::TextBox\string^\ tbAuthor;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ System::ComponentModel::Container\ \string^components;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#pragma\ region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeComponent(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys\ =\ (gcnew\ System::Windows::Forms::ListView());}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Fecha\ =\ (gcnew\ System::Windows::Forms::ColumnHeader());}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack\ =\ (gcnew\ System::Windows::Forms::Button());}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor\ =\ (gcnew\ System::Windows::Forms::Label());}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbAuthor\ =\ (gcnew\ System::Windows::Forms::TextBox());}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>SuspendLayout();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lsvEnrtys}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>Columns-\/>AddRange(gcnew\ cli::array<\ System::Windows::Forms::ColumnHeader\string^\ \ >(1)\ \{\ this-\/>Fecha\ \});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>FullRowSelect\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>HideSelection\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>Location\ =\ System::Drawing::Point(12,\ 65);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>MultiSelect\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>Name\ =\ L\textcolor{stringliteral}{"{}lsvEnrtys"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>Size\ =\ System::Drawing::Size(245,\ 430);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>TabIndex\ =\ 0;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>UseCompatibleStateImageBehavior\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>View\ =\ System::Windows::Forms::View::Details;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lsvEnrtys-\/>SelectedIndexChanged\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&VisualizationForm::listView1\_SelectedIndexChanged);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fecha}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Fecha-\/>Text\ =\ L\textcolor{stringliteral}{"{}Fecha"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Fecha-\/>Width\ =\ 245;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbDescription}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription-\/>Location\ =\ System::Drawing::Point(263,\ 65);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription-\/>Multiline\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbDescription"{}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription-\/>ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription-\/>Size\ =\ System::Drawing::Size(511,\ 403);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDescription-\/>TabIndex\ =\ 1;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbVolunteer}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer-\/>Location\ =\ System::Drawing::Point(16,\ 16);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbVolunteer"{}};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer-\/>Size\ =\ System::Drawing::Size(57,\ 13);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer-\/>TabIndex\ =\ 2;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbVolunteer-\/>Text\ =\ L\textcolor{stringliteral}{"{}Voluntario:"{}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbDNI}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Location\ =\ System::Drawing::Point(377,\ 15);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbDNI"{}};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Size\ =\ System::Drawing::Size(65,\ 13);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>TabIndex\ =\ 3;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDNI-\/>Text\ =\ L\textcolor{stringliteral}{"{}Documento:"{}};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbEntrys}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys-\/>Location\ =\ System::Drawing::Point(16,\ 49);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbEntrys"{}};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys-\/>Size\ =\ System::Drawing::Size(52,\ 13);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys-\/>TabIndex\ =\ 4;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbEntrys-\/>Text\ =\ L\textcolor{stringliteral}{"{}Entradas:"{}};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbVolunteer}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer-\/>Location\ =\ System::Drawing::Point(79,\ 9);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbVolunteer"{}};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer-\/>ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer-\/>Size\ =\ System::Drawing::Size(292,\ 20);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbVolunteer-\/>TabIndex\ =\ 5;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbDNI}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Location\ =\ System::Drawing::Point(448,\ 9);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbDNI"{}};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>Size\ =\ System::Drawing::Size(325,\ 20);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbDNI-\/>TabIndex\ =\ 6;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbDescription}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription-\/>Location\ =\ System::Drawing::Point(263,\ 49);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbDescription"{}};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription-\/>Size\ =\ System::Drawing::Size(66,\ 13);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription-\/>TabIndex\ =\ 7;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbDescription-\/>Text\ =\ L\textcolor{stringliteral}{"{}Descripcion:"{}};}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btBack}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>Location\ =\ System::Drawing::Point(699,\ 507);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>Name\ =\ L\textcolor{stringliteral}{"{}btBack"{}};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>Size\ =\ System::Drawing::Size(75,\ 23);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>TabIndex\ =\ 8;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>Text\ =\ L\textcolor{stringliteral}{"{}Volver"{}};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>btBack-\/>Click\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&VisualizationForm::btBack\_Click);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lbAuthor}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor-\/>AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor-\/>Location\ =\ System::Drawing::Point(266,\ 481);}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor-\/>Name\ =\ L\textcolor{stringliteral}{"{}lbAuthor"{}};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor-\/>Size\ =\ System::Drawing::Size(35,\ 13);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor-\/>TabIndex\ =\ 9;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>lbAuthor-\/>Text\ =\ L\textcolor{stringliteral}{"{}Autor:"{}};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tbAuthor}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbAuthor-\/>Location\ =\ System::Drawing::Point(307,\ 474);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbAuthor-\/>Name\ =\ L\textcolor{stringliteral}{"{}tbAuthor"{}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbAuthor-\/>ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbAuthor-\/>Size\ =\ System::Drawing::Size(466,\ 20);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>tbAuthor-\/>TabIndex\ =\ 10;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ VisualizationForm}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AcceptButton\ =\ this-\/>btBack;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleDimensions\ =\ System::Drawing::SizeF(6,\ 13);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>AutoScaleMode\ =\ System::Windows::Forms::AutoScaleMode::Font;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ClientSize\ =\ System::Drawing::Size(786,\ 542);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbAuthor);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbAuthor);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>btBack);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbDescription);}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbDNI);}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbVolunteer);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbEntrys);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbDNI);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lbVolunteer);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>tbDescription);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Controls-\/>Add(this-\/>lsvEnrtys);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>FormBorderStyle\ =\ System::Windows::Forms::FormBorderStyle::FixedSingle;}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Name\ =\ L\textcolor{stringliteral}{"{}VisualizationForm"{}};}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Text\ =\ L\textcolor{stringliteral}{"{}VisualizationForm"{}};}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>Load\ +=\ gcnew\ System::EventHandler(\textcolor{keyword}{this},\ \&VisualizationForm::VisualizationForm\_Load);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>PerformLayout();}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00228\ \textcolor{keyword}{private}:\ System::Void\ listView1\_SelectedIndexChanged(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00229\ \textcolor{keyword}{private}:\ System::Void\ VisualizationForm\_Load(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00230\ \textcolor{keyword}{private}:\ System::Void\ btBack\_Click(System::Object\string^\ sender,\ System::EventArgs\string^\ e);}
+\DoxyCodeLine{00231\ \};}
+\DoxyCodeLine{00232\ \}}
+
+\end{DoxyCode}

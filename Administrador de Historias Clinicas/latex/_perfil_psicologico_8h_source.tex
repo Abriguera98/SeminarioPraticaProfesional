@@ -1,0 +1,31 @@
+\doxysection{Perfil\+Psicologico.\+h}
+\hypertarget{_perfil_psicologico_8h_source}{}\label{_perfil_psicologico_8h_source}\index{X:/Data Abstractions/PerfilPsicologico.h@{X:/Data Abstractions/PerfilPsicologico.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Entrada.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Voluntario.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_perfil_psicologico}{PerfilPsicologico}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_perfil_psicologico}{PerfilPsicologico}}(\mbox{\hyperlink{class_voluntario}{Voluntario}}*\ aVoluntario,\ std::vector<Entrada*>*\ aEntradas,\ \textcolor{keywordtype}{bool}\ aActivo);}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_voluntario}{Voluntario}}*\ getVoluntario()\ \{\ \textcolor{keywordflow}{return}\ mVoluntario;\ \};}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<Entrada*>*\ getEntradas()\ \{\ \textcolor{keywordflow}{return}\ mEntradas;\ \};}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ getUltimaModificacion()\ \{\ \textcolor{keywordflow}{return}\ mUltimaModificacion;\ \};}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ setUltimaModificacion(\ std::string\ nuevaModificacion)\ \{\ mUltimaModificacion\ =\ nuevaModificacion;\ \};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ getActivo()\ \{\ \textcolor{keywordflow}{return}\ mActivo;\ \};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ setActivo(\textcolor{keywordtype}{bool}\ newState)\ \{\ mActivo\ =\ newState;\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ ActualizarUltimaModificacion();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_voluntario}{Voluntario}}*\ mVoluntario;}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Entrada*>*\ mEntradas;}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ mUltimaModificacion;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ mActivo;}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

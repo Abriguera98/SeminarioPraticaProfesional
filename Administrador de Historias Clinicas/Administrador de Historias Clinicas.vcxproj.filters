@@ -60,9 +60,6 @@
     <ClInclude Include="Core\Constants.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="UI\LoginFailedMessage.h">
-      <Filter>Header Files\UI</Filter>
-    </ClInclude>
     <ClInclude Include="UI\MainForm.h">
       <Filter>Header Files\UI</Filter>
     </ClInclude>
@@ -108,9 +105,6 @@
       <Filter>Source Files\UI</Filter>
     </ClCompile>
     <ClCompile Include="UI\LoginForm.cpp">
-      <Filter>Source Files\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="UI\LoginFailedMessage.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
     <ClCompile Include="UI\MainForm.cpp">

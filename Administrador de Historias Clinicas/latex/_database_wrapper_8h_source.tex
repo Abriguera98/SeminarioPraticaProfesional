@@ -1,0 +1,34 @@
+\doxysection{Database\+Wrapper.\+h}
+\hypertarget{_database_wrapper_8h_source}{}\label{_database_wrapper_8h_source}\index{X:/Core/DatabaseWrapper.h@{X:/Core/DatabaseWrapper.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SQLAPI.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../Data\ Abstractions/PerfilPsicologico.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}*\ getInstance();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}(\mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ Connect();}
+\DoxyCodeLine{00015\ \ \ \ \ std::map<unsigned\ int,\ PerfilPsicologico*>*\ getPerfiles();}
+\DoxyCodeLine{00016\ \ \ \ \ std::size\_t\ GetUserLogin(std::string);}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_usuario}{Usuario}}*\ GetLoggedUser(std::string);}
+\DoxyCodeLine{00018\ \ \ \ \ System::String\string^\ getEntryAuthorFromProfileDate(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ profileID,\ System::String\string^\ date);}
+\DoxyCodeLine{00019\ \ \ \ \ System::String\string^\ getEntryDescriptionFromProfileDate(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ profileID,\ System::String\string^\ date);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ changeProfileState(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_perfil_psicologico}{PerfilPsicologico}}*\ addNewEmptyProfile(System::String\string^\ name,\ System::String\string^\ lastName,\ System::String\string^\ dni);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_entrada}{Entrada}}*\ addNewEntryToProfile(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index,\ System::String\string^\ date,\ System::String\string^\ description,\ \mbox{\hyperlink{class_usuario}{Usuario}}*\ user);}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}*\ mInstance;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}();}
+\DoxyCodeLine{00027\ \ \ \ \ SAConnection\ mConnection;}
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

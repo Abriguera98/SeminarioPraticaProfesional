@@ -1,0 +1,49 @@
+\doxysection{Data\+Processor.\+h}
+\hypertarget{_data_processor_8h_source}{}\label{_data_processor_8h_source}\index{X:/Core/DataProcessor.h@{X:/Core/DataProcessor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../Data\ Abstractions/PerfilPsicologico.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}DatabaseWrapper.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_processor}{DataProcessor}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{enum}\ Result\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ eNotSet\ =\ 0}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//Singleton\ Definition}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_data_processor}{DataProcessor}}*\ getInstance();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_usuario}{Usuario}}*\ mLoggedUser;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_data_processor}{DataProcessor}}(\mbox{\hyperlink{class_data_processor}{DataProcessor}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_data_processor}{DataProcessor}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Result\ Handling}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ resetResult()\ \{\ mResult\ =\ eNotSet;\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setResult(Result\ value)\ \{\ mResult\ =\ value;\ \};}
+\DoxyCodeLine{00024\ \ \ \ \ Result\ getResult()\ \{\ \textcolor{keywordflow}{return}\ mResult;\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ attemptLogin();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ fillPerfiles();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ fillMainData(System::Windows::Forms::ListView\string^\ list);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ reloadView(System::Windows::Forms::ListView\string^\ list);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ reloadRow(System::Windows::Forms::ListView\string^\ list,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ fillViewData(System::Windows::Forms::ListView\string^\ list,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ profile);}
+\DoxyCodeLine{00032\ \ \ \ \ System::String\string^\ getEntryAuthorFromProfileDate(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ profileID,\ System::String\string^\ date);}
+\DoxyCodeLine{00033\ \ \ \ \ System::String\string^\ getEntryDescriptionFromProfileDate(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ profileID,\ System::String\string^\ date);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ changeProfileState(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ addNewEmptyProfile(System::String\string^\ name,\ System::String\string^\ lastName,\ System::String\string^\ dni);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ addNewEntryToProfile(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index,\ System::String\string^\ date,\ System::String\string^\ description);}
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ std::map<unsigned\ int,\ PerfilPsicologico*>*\ mPerfiles;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_data_processor}{DataProcessor}}*\ mInstance;}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_database_wrapper}{DatabaseWrapper}}*\ mDatabaseWrapper;}
+\DoxyCodeLine{00041\ \ \ \ \ Result\ mResult;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_data_processor}{DataProcessor}}();}
+\DoxyCodeLine{00043\ \};}
+
+\end{DoxyCode}

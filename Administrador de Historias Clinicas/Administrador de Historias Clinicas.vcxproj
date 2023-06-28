@@ -141,7 +141,6 @@
     <ClCompile Include="Data Abstractions\Voluntario.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="UI\LandingForm.cpp" />
-    <ClCompile Include="UI\LoginFailedMessage.cpp" />
     <ClCompile Include="UI\LoginForm.cpp" />
     <ClCompile Include="UI\MainForm.cpp" />
     <ClCompile Include="UI\NewEntryForm.cpp" />
@@ -160,9 +159,6 @@
     <ClInclude Include="Data Abstractions\Voluntario.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="UI\LandingForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="UI\LoginFailedMessage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="UI\LoginForm.h">
@@ -184,9 +180,6 @@
   <ItemGroup>
     <EmbeddedResource Include="UI\LandingForm.resx">
       <DependentUpon>UI\LandingForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LoginFailedMessage.resx">
-      <DependentUpon>UI\LoginFailedMessage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>UI\LoginForm.h</DependentUpon>

@@ -1,0 +1,84 @@
+\doxysection{GUIManager Class Reference}
+\hypertarget{class_g_u_i_manager}{}\label{class_g_u_i_manager}\index{GUIManager@{GUIManager}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_u_i_manager_a0b57f76506c980282fa369bae7d1fdd1}\label{class_g_u_i_manager_a0b57f76506c980282fa369bae7d1fdd1} 
+enum {\bfseries Result} \{ {\bfseries e\+Not\+Set} = 0
+, {\bfseries e\+Closed}
+, {\bfseries e\+Proceed\+To\+Login\+Window}
+, {\bfseries e\+Login\+Verified}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_u_i_manager_a896f474d9d0f96cd2b55b2841d9d0c13}\label{class_g_u_i_manager_a896f474d9d0f96cd2b55b2841d9d0c13} 
+{\bfseries GUIManager} (\mbox{\hyperlink{class_g_u_i_manager}{GUIManager}} \&other)=delete
+\item 
+\Hypertarget{class_g_u_i_manager_af762990a4fe52af3325dcf48b1d460de}\label{class_g_u_i_manager_af762990a4fe52af3325dcf48b1d460de} 
+void {\bfseries operator=} (const \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}} \&)=delete
+\item 
+\Hypertarget{class_g_u_i_manager_aa60d389227bc45600c3cfe6b11ba543f}\label{class_g_u_i_manager_aa60d389227bc45600c3cfe6b11ba543f} 
+void {\bfseries reset\+Result} ()
+\item 
+\Hypertarget{class_g_u_i_manager_a71fa17ec265efcb9f655b3991aae8ce1}\label{class_g_u_i_manager_a71fa17ec265efcb9f655b3991aae8ce1} 
+void {\bfseries set\+Result} (Result value)
+\item 
+\Hypertarget{class_g_u_i_manager_a6a0e565578b3e2eb01387da5eb1f4331}\label{class_g_u_i_manager_a6a0e565578b3e2eb01387da5eb1f4331} 
+Result {\bfseries get\+Result} ()
+\item 
+\Hypertarget{class_g_u_i_manager_aebb0a18605ac72733eeb23e1582799a6}\label{class_g_u_i_manager_aebb0a18605ac72733eeb23e1582799a6} 
+void {\bfseries add\+New\+Empty\+Profile} (System\+::\+String\texorpdfstring{$^\wedge$}{\string^} name, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} last\+Name, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} dni)
+\item 
+\Hypertarget{class_g_u_i_manager_aa289a4ea3da9cb7a023f8adbb48a97e9}\label{class_g_u_i_manager_aa289a4ea3da9cb7a023f8adbb48a97e9} 
+void {\bfseries Show\+Landing\+Screen} ()
+\item 
+\Hypertarget{class_g_u_i_manager_a5ff5f7bf36e76cc0c0f59acf0c6494be}\label{class_g_u_i_manager_a5ff5f7bf36e76cc0c0f59acf0c6494be} 
+void {\bfseries Show\+Login\+Screen} ()
+\item 
+\Hypertarget{class_g_u_i_manager_a5cbc4c0b5680c555ee10236daa4823b8}\label{class_g_u_i_manager_a5cbc4c0b5680c555ee10236daa4823b8} 
+void {\bfseries Show\+Login\+Failed} ()
+\item 
+\Hypertarget{class_g_u_i_manager_a8d1c1e76048f97db58cf6444853263ea}\label{class_g_u_i_manager_a8d1c1e76048f97db58cf6444853263ea} 
+void {\bfseries Show\+Main\+Screen} ()
+\item 
+\Hypertarget{class_g_u_i_manager_a089acd4bf8ee8ae97b1b0720599362a2}\label{class_g_u_i_manager_a089acd4bf8ee8ae97b1b0720599362a2} 
+bool {\bfseries attempt\+Login} ()
+\item 
+\Hypertarget{class_g_u_i_manager_a3189e5cd1d7563974a22a311506ac143}\label{class_g_u_i_manager_a3189e5cd1d7563974a22a311506ac143} 
+void {\bfseries fill\+Main\+Data} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list)
+\item 
+\Hypertarget{class_g_u_i_manager_a1b099d6b9c02501c2df92a4e9417884e}\label{class_g_u_i_manager_a1b099d6b9c02501c2df92a4e9417884e} 
+void {\bfseries reload\+View} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list)
+\item 
+\Hypertarget{class_g_u_i_manager_a40987bebd17772c6e0f205f91a7c3559}\label{class_g_u_i_manager_a40987bebd17772c6e0f205f91a7c3559} 
+void {\bfseries reload\+Row} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list, unsigned int index)
+\item 
+\Hypertarget{class_g_u_i_manager_a8078b9a8622abb01939e78e2321d8693}\label{class_g_u_i_manager_a8078b9a8622abb01939e78e2321d8693} 
+void {\bfseries fill\+View\+Data} (System\+::\+Windows\+::\+Forms\+::\+List\+View\texorpdfstring{$^\wedge$}{\string^} list, unsigned int profile)
+\item 
+\Hypertarget{class_g_u_i_manager_a946bccf17afc43dc4a58bc3e9e3ad312}\label{class_g_u_i_manager_a946bccf17afc43dc4a58bc3e9e3ad312} 
+System\+::\+String {\bfseries get\+Entry\+Description\+From\+Profile\+Date} (unsigned int profile\+ID, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date)
+\item 
+\Hypertarget{class_g_u_i_manager_a8f11d9cd6c63acdd13cdf8fdc9dc3df1}\label{class_g_u_i_manager_a8f11d9cd6c63acdd13cdf8fdc9dc3df1} 
+System\+::\+String {\bfseries get\+Entry\+Author\+From\+Profile\+Date} (unsigned int profile\+ID, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date)
+\item 
+\Hypertarget{class_g_u_i_manager_addec8899aca78ece518ef6e8199b0653}\label{class_g_u_i_manager_addec8899aca78ece518ef6e8199b0653} 
+void {\bfseries change\+Profile\+State} (unsigned int index)
+\item 
+\Hypertarget{class_g_u_i_manager_ada3d75cf1f7f3c6d8e8295f5569ad999}\label{class_g_u_i_manager_ada3d75cf1f7f3c6d8e8295f5569ad999} 
+void {\bfseries add\+New\+Entry\+To\+Profile} (unsigned int index, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} description)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_u_i_manager_adb922ebe48ba1267727c8e7bc5d02c88}\label{class_g_u_i_manager_adb922ebe48ba1267727c8e7bc5d02c88} 
+static \mbox{\hyperlink{class_g_u_i_manager}{GUIManager}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} (\mbox{\hyperlink{class_data_processor}{Data\+Processor}} \texorpdfstring{$\ast$}{*}data\+Processor)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+X\+:/\+Core/GUIManager.\+h\item 
+X\+:/\+Core/GUIManager.\+cpp\end{DoxyCompactItemize}

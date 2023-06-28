@@ -19,7 +19,7 @@ DataProcessor* DataProcessor::getInstance()
 DataProcessor::DataProcessor()
 	: mPerfiles(new std::map<unsigned int, PerfilPsicologico*>())
 {
-	mDatabaseWrapper = DatabaseWrapper::getInstance();
+	mDatabaseWrapper = DatabaseInterface::getInstance();
 	mDatabaseWrapper->Connect();
 }
 

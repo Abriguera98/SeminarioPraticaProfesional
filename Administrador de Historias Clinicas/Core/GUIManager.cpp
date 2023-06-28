@@ -7,7 +7,6 @@
 
 #include "../UI/LandingForm.h"
 #include "../UI/LoginForm.h"
-#include "../UI/LoginFailedMessage.h"
 #include "../UI/MainForm.h"
 
 using namespace System;
@@ -46,14 +45,9 @@ void GUIManager::ShowLoginScreen()
 	Application::Run(% var);
 }
 
-void GUIManager::ShowLoginFailed()
-{
-	UIForms::LoginFailedMessage var(this);
-	Application::Run(% var);
-};
-
 void GUIManager::ShowMainScreen()
 {
+	mDataProcessor->fillPerfiles();
 	UIForms::MainForm var(this);
 	Application::Run(% var);
 }

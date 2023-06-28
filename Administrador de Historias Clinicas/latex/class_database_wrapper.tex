@@ -1,0 +1,50 @@
+\doxysection{Database\+Wrapper Class Reference}
+\hypertarget{class_database_wrapper}{}\label{class_database_wrapper}\index{DatabaseWrapper@{DatabaseWrapper}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_database_wrapper_aab25b23632b191aedab980a8666deeb9}\label{class_database_wrapper_aab25b23632b191aedab980a8666deeb9} 
+{\bfseries Database\+Wrapper} (\mbox{\hyperlink{class_database_wrapper}{Database\+Wrapper}} \&other)=delete
+\item 
+\Hypertarget{class_database_wrapper_a0a3dccbe8af0ae530f17df7dc5b24efb}\label{class_database_wrapper_a0a3dccbe8af0ae530f17df7dc5b24efb} 
+void {\bfseries operator=} (const \mbox{\hyperlink{class_database_wrapper}{Database\+Wrapper}} \&)=delete
+\item 
+\Hypertarget{class_database_wrapper_a2f8065cd8c55da229caef5ce2eb51abb}\label{class_database_wrapper_a2f8065cd8c55da229caef5ce2eb51abb} 
+void {\bfseries Connect} ()
+\item 
+\Hypertarget{class_database_wrapper_adf93ea0bad3261420adbbac3e6bc1b8a}\label{class_database_wrapper_adf93ea0bad3261420adbbac3e6bc1b8a} 
+std\+::map$<$ unsigned int, \mbox{\hyperlink{class_perfil_psicologico}{Perfil\+Psicologico}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} {\bfseries get\+Perfiles} ()
+\item 
+\Hypertarget{class_database_wrapper_a2b8e0178805c4742cba91bdbc9b090eb}\label{class_database_wrapper_a2b8e0178805c4742cba91bdbc9b090eb} 
+std\+::size\+\_\+t {\bfseries Get\+User\+Login} (std\+::string)
+\item 
+\Hypertarget{class_database_wrapper_a5dfc410636d423e30d0bdf621c4ad33f}\label{class_database_wrapper_a5dfc410636d423e30d0bdf621c4ad33f} 
+\mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Logged\+User} (std\+::string)
+\item 
+\Hypertarget{class_database_wrapper_a97769526550b712a76053e4aaaef1780}\label{class_database_wrapper_a97769526550b712a76053e4aaaef1780} 
+System\+::\+String {\bfseries get\+Entry\+Author\+From\+Profile\+Date} (unsigned int profile\+ID, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date)
+\item 
+\Hypertarget{class_database_wrapper_aa215815f22f8d371206186d7696a6b34}\label{class_database_wrapper_aa215815f22f8d371206186d7696a6b34} 
+System\+::\+String {\bfseries get\+Entry\+Description\+From\+Profile\+Date} (unsigned int profile\+ID, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date)
+\item 
+\Hypertarget{class_database_wrapper_a7c69fa94b424c4ada2f72772461b849f}\label{class_database_wrapper_a7c69fa94b424c4ada2f72772461b849f} 
+void {\bfseries change\+Profile\+State} (unsigned int index)
+\item 
+\Hypertarget{class_database_wrapper_a4e694845c876d5370cce635d8ef4278c}\label{class_database_wrapper_a4e694845c876d5370cce635d8ef4278c} 
+\mbox{\hyperlink{class_perfil_psicologico}{Perfil\+Psicologico}} \texorpdfstring{$\ast$}{*} {\bfseries add\+New\+Empty\+Profile} (System\+::\+String\texorpdfstring{$^\wedge$}{\string^} name, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} last\+Name, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} dni)
+\item 
+\Hypertarget{class_database_wrapper_a3fddcc07bd937f6b710c76c466334ef1}\label{class_database_wrapper_a3fddcc07bd937f6b710c76c466334ef1} 
+\mbox{\hyperlink{class_entrada}{Entrada}} \texorpdfstring{$\ast$}{*} {\bfseries add\+New\+Entry\+To\+Profile} (unsigned int index, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} date, System\+::\+String\texorpdfstring{$^\wedge$}{\string^} description, \mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}user)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_database_wrapper_a488282e8616947003e39ee6818471030}\label{class_database_wrapper_a488282e8616947003e39ee6818471030} 
+static \mbox{\hyperlink{class_database_wrapper}{Database\+Wrapper}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+X\+:/\+Core/Database\+Wrapper.\+h\item 
+X\+:/\+Core/Database\+Wrapper.\+cpp\end{DoxyCompactItemize}
