@@ -23,6 +23,11 @@ GUIManager* GUIManager::getInstance(DataProcessor* dataProcessor)
 	return mInstance;
 }
 
+GUIManager::~GUIManager()
+{
+	delete mDataProcessor;
+}
+
 GUIManager::GUIManager(DataProcessor* dataProcessor)
 {
 	mDataProcessor = dataProcessor;

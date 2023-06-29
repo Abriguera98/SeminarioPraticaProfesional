@@ -7,9 +7,9 @@
 class DatabaseInterface {
 public:
 	static DatabaseInterface* getInstance();
-
 	DatabaseInterface(DatabaseInterface& other) = delete;
 	void operator=(const DatabaseInterface&) = delete;
+	~DatabaseInterface();
 
 	void Connect();
 	std::map<unsigned int, PerfilPsicologico*>* getPerfiles();

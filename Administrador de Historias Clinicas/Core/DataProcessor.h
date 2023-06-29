@@ -14,6 +14,7 @@ public:
 	static Usuario* mLoggedUser;
 	DataProcessor(DataProcessor& other) = delete;
 	void operator=(const DataProcessor&) = delete;
+	~DataProcessor();
 
 	bool attemptLogin();
 	void fillPerfiles();

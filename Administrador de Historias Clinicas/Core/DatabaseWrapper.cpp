@@ -21,6 +21,11 @@ DatabaseInterface* DatabaseInterface::getInstance()
 	return mInstance;
 }
 
+DatabaseInterface::~DatabaseInterface()
+{
+    mConnection.Disconnect();
+}
+
 void DatabaseInterface::Connect()
 {
     try

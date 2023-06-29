@@ -17,6 +17,7 @@ class StateMachine {
 	};
 public:
 	static StateMachine* getInstance();
+	~StateMachine();
 
 	static bool addData(std::string key, std::string value);
 	static bool getData(std::string key, std::string& ret);
@@ -31,7 +32,6 @@ private:
 	static std::map<std::string, std::string>* mDataMap;
 
 	GUIManager* mGUIManager;
-	//DataProcessor* mDataProcessor;
 	StateMachine();
 
 	State mState;

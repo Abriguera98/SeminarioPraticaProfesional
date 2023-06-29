@@ -21,6 +21,11 @@ StateMachine* StateMachine::getInstance()
 	return mInstance;
 }
 
+StateMachine::~StateMachine()
+{
+	delete mGUIManager;
+}
+
 bool StateMachine::addData(std::string key, std::string value)
 {
 	(*mDataMap)[key] =  value;

@@ -20,6 +20,7 @@ public:
 	static GUIManager* getInstance(DataProcessor* dataProcessor);
 	GUIManager(GUIManager& other) = delete;
 	void operator=(const GUIManager &) = delete;
+	~GUIManager();
 
 	//Result Handling
 	void resetResult() { mResult = eNotSet; };

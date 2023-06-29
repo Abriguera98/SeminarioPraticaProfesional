@@ -23,6 +23,12 @@ DataProcessor::DataProcessor()
 	mDatabaseWrapper->Connect();
 }
 
+DataProcessor::~DataProcessor()
+{
+	delete mPerfiles;
+	delete mDatabaseWrapper;
+}
+
 bool DataProcessor::attemptLogin()
 {
 	std::string aUser;

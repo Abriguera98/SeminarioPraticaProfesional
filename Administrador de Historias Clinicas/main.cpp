@@ -16,4 +16,5 @@ void main(array<String^>^ args)
 
     mStateMachine->run();
 
+    delete mStateMachine;
 }
