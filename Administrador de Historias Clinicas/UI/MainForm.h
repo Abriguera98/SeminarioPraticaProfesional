@@ -204,8 +204,8 @@ namespace UIForms {
 			this->Controls->Add(this->btnSearch);
 			this->Controls->Add(this->textBox1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Name = L"MainForm";
-			this->Text = L"MainScreen";
+			this->Name = L"Sistema de Gestion de Perfiles Psicologicos";
+			this->Text = L"Sistema de Gestion de Perfiles Psicologicos";
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			this->Closed += gcnew System::EventHandler(this, &MainForm::UserClosing);
 			this->ResumeLayout(false);

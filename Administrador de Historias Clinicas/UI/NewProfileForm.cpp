@@ -14,7 +14,7 @@ namespace UIForms {
 		}
 		if (!System::Text::RegularExpressions::Regex::IsMatch(tbDNI->Text, "^[0-9]+$") || tbDNI->Text->Length < 7)
 		{
-			errors += "DNI no valido\n";
+			errors += "El voluntario ya posee un perfil\n";
 		}
 
 		if (errors != "")

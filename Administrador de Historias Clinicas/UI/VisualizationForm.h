@@ -217,8 +217,8 @@ namespace UIForms {
 			this->Controls->Add(this->tbDescription);
 			this->Controls->Add(this->lsvEnrtys);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Name = L"VisualizationForm";
-			this->Text = L"VisualizationForm";
+			this->Name = L"Visualizar Perfil";
+			this->Text = L"Visualizar Perfil";
 			this->Load += gcnew System::EventHandler(this, &VisualizationForm::VisualizationForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

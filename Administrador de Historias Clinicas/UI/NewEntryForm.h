@@ -149,7 +149,7 @@ namespace UIForms {
 			this->Controls->Add(this->lbDate);
 			this->Controls->Add(this->lbSteps);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Name = L"NewEntryForm";
+			this->Name = L"Agregar Entrada";
 			this->Text = L"Agregar Entrada";
 			this->ResumeLayout(false);
 			this->PerformLayout();

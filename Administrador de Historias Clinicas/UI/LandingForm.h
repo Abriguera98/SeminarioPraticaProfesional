@@ -108,8 +108,8 @@ namespace UIForms {
 			this->Controls->Add(this->btnLogin);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
-			this->Name = L"LandingForm";
-			this->Text = L"Sistema de Gestion de Historias Clinicas";
+			this->Name = L"Bienvenido";
+			this->Text = L"Bienvenido";
 			this->Closed += gcnew System::EventHandler(this, &LandingForm::UserClosing);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -119,6 +119,5 @@ namespace UIForms {
 		private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e);
 		private: System::Void UserClosing(System::Object^ sender, System::EventArgs^ e);
 		private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e);
-
-	};
+};
 }

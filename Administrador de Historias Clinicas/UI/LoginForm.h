@@ -150,8 +150,8 @@ namespace UIForms {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
-			this->Name = L"LoginForm";
-			this->Text = L"LoginForm";
+			this->Name = L"Ingresar";
+			this->Text = L"Ingresar";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

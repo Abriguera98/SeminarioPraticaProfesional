@@ -176,7 +176,7 @@ namespace UIForms {
 			this->Controls->Add(this->tbName);
 			this->Controls->Add(this->lbName);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Name = L"NewProfileForm";
+			this->Name = L"Crear Perfil";
 			this->Text = L"Crear Perfil";
 			this->ResumeLayout(false);
 			this->PerformLayout();
